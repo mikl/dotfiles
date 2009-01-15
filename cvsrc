@@ -1,0 +1,6 @@
+cvs -q -z0
+diff -u5Ncat p
+checkout -P
+update -d -P
+status -v
+remove -f
