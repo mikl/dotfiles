@@ -8,7 +8,7 @@ Works only on Unix-like operating systems that support symlinks (obviously)
 
 import os
 from fnmatch import fnmatch
-from pprint import pprint
+from shutil import rmtree
 from optparse import OptionParser
 
 # Parse commmandline options
@@ -23,7 +23,7 @@ skip_list = ['.*', 'linkdotfiles', 'README.markdown']
 
 
 
-cwd = os.path.realpath(os.getcwdu())
+cwd = os.path.realpath(os.getcwd())
 homedir = os.path.expanduser('~')
 files = os.listdir(cwd)
 
@@ -43,7 +43,7 @@ for filename in files:
                 os.remove(destination)
             except OSError:
                 try:
-                    os.rmdir(destination)
+                    rmtree(destination)
                 except OSError, e:
                     print 'Failed to delete %s' % destination
                     pprint(e)
