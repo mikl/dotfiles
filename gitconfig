@@ -1,0 +1,13 @@
+[user]
+	name = Mikkel Hoegh
+	email = mikkel@hoegh.org
+[color]
+	ui = auto
+[merge]
+	tool = opendiff
+	summary = true
+[core]
+	excludesfile = ~/.gitignore
+[github]
+	user = mikl
+
