@@ -28,7 +28,7 @@ set background=dark " color of terminal background
 if &t_Co > 2 || has("gui_running")
   syntax on
 endif
-colorscheme moria
+colorscheme desert
 
 """"""""""""""""""""""""
 " Backup configuration "
