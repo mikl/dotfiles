@@ -1,0 +1,18 @@
+#Run everything through SpamAssassin 
+xfilter "/usr/bin/spamassassin"
+if (/^X-Spam-Level: \*\*\*\*/)
+    to Mail/Spam
+
+if (/^List-Post: <mailto:development@drupal\.org>/)
+    to Mail/drupal-devel
+
+if (/^X-Mailing-List: pgsql-general/)
+    to Mail/pgsql-general
+if (/^X-Mailing-List: pgsql-performance/)
+    to Mail/pgsql-performance
+
+if (/^List-Post: <mailto:varnish-misc@projects\.linpro.no>/)
+    to Mail/varnish-misc
+
+DEFAULT="Mail/inbox"
+

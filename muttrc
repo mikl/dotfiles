@@ -1,0 +1,49 @@
+set realname="Mikkel Høgh"
+set from="m@ooh.dk"
+set envelope_from
+
+set spoolfile=~/Mail/inbox
+set meta_key=yes
+
+set editor="vim +13 -c 'set tw=72 ft=mail noautoindent'"
+set mbox=+inbox
+set nobeep
+set nostrict_threads
+
+set sendmail="/usr/sbin/ssmtp"
+set sendmail_wait=-1                      # Don't wait around for sendmail.
+set fcc_clear                             # Keep fcc's clear of signatues and encryption.
+set text_flowed               # label messages as format-flowed
+
+# sidebar settings
+# set up the sidebar, default not visible 
+set sidebar_width=12 
+set sidebar_visible=no
+set sidebar_delim='|' 
+
+# which mailboxes to list in the sidebar 
+mailboxes =inbox =mikl =drupal-devel =drupal-themes =drupal-consulting =pgsql-general =pgsql-performance =pgsql-php =sent =varnish-misc 
+
+# color of folders with new mail 
+color sidebar_new yellow default 
+
+
+# ctrl-n, ctrl-p to select next, prev folder 
+# ctrl-o to open selected folder 
+bind index \CP sidebar-prev 
+bind index \CN sidebar-next 
+bind index \CO sidebar-open 
+bind pager \CP sidebar-prev 
+bind pager \CN sidebar-next 
+bind pager \CO sidebar-open 
+
+# b toggles sidebar visibility 
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>' 
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>' 
+
+# Remap bounce-message function to "B" 
+bind index B bounce-message
+
+macro index G "!getmail -v\n" "Invoke getmail"
+
+
