@@ -46,7 +46,6 @@ for filename in files:
                     rmtree(destination)
                 except OSError, e:
                     print 'Failed to delete %s' % destination
-                    pprint(e)
                     continue
         else:
             print 'Not overwriting %s since the file exists already and force (-f) is not in effect' % destination
