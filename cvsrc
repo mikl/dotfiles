@@ -1,5 +1,5 @@
 cvs -q -z0
-diff -u5Ncat p
+diff -u5Np
 checkout -P
 update -d -P
 status -v
