@@ -124,6 +124,7 @@ let Grep_Xargs_Path = '/usr/bin/xargs'
 """"""""""""""""""""""""""""""
 " Finegrained filetype stuff "
 """"""""""""""""""""""""""""""
+au BufNewFile,BufRead *.wsgi set ft=python
 au BufNewFile,BufRead *.kid set ft=xml
 au BufNewFile,BufRead *.inc set ft=php
 au BufNewFile,BufRead *.module set ft=php
