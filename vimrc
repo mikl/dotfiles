@@ -146,3 +146,8 @@ au FileType mkd set ai formatoptions=tcroqn2 comments=n:>
 
 let php_noShortTags=1
 let g:python_highlight_all=1
+
+" Security fix: modelines have been an avenue for trojan attacks against
+" VIM-users, so we'll disable that
+set nomodeline
+
