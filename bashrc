@@ -108,8 +108,6 @@ function setprompt {
             ;;
     esac
 
-    local temp=$(tty)
-    local GRAD1=${temp:5}
 PS1="$TITLEBAR\
 $COLOUR1-$COLOUR2($NO_COLOUR\u$COLOUR3@$NO_COLOUR\h$COLOUR2)\
 $COLOUR1-$COLOUR2($NO_COLOUR\#$COLOUR3/$NO_COLOUR$GRAD1$COLOUR2)\
@@ -120,7 +118,6 @@ $COLOUR1-$COLOUR2($NO_COLOUR\$ "
 
 
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
-export MANPATH=/opt/local/share/man:$MANPATH
 export PAGER=less
 export LESS=-r
 export EDITOR=/usr/bin/vim
