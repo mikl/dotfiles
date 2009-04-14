@@ -3,11 +3,23 @@
 	email = mikkel@hoegh.org
 [color]
 	ui = auto
+	interactive = auto
 [merge]
 	tool = opendiff
 	summary = true
 [core]
 	excludesfile = ~/.gitignore
+	legacyheaders = false
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	staged = "diff --cached"
+	oneline = "log --pretty=oneline"
+[format]
+	numbered = auto
+[repack]
+	usedeltabaseoffset = true
 [github]
 	user = mikl
 
