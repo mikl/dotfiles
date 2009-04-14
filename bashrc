@@ -117,7 +117,7 @@ $COLOUR1-$COLOUR2($NO_COLOUR\$ "
 
 
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
+export PATH=/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
 export PAGER=less
 export LESS=-r
 export EDITOR=/usr/bin/vim
