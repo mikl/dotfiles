@@ -1,25 +1,25 @@
-[user]
-	name = Mikkel Hoegh
-	email = mikkel@hoegh.org
-[color]
-	ui = auto
-	interactive = auto
-[merge]
-	tool = opendiff
-	summary = true
 [core]
 	excludesfile = ~/.gitignore
 	legacyheaders = false
+[user]
+	name = Mikkel Hoegh
+	email = mikkel@hoegh.org
+[format]
+	numbered = auto
+[repack]
+	usedeltabaseoffset = true
+[color]
+	ui = auto
+	interactive = auto
 [alias]
 	st = status
 	ci = commit
 	co = checkout
 	staged = "diff --cached"
 	oneline = "log --pretty=oneline"
-[format]
-	numbered = auto
-[repack]
-	usedeltabaseoffset = true
+[merge]
+	tool = opendiff
+	summary = true
 [github]
 	user = mikl
 
