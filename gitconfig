@@ -18,7 +18,7 @@
 	staged = "diff --cached"
 	oneline = "log --pretty=oneline"
 [merge]
-	tool = opendiff
+	tool = gvimdiff
 	summary = true
 [github]
 	user = mikl
