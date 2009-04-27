@@ -5,10 +5,18 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Keep 10000 lines in .bash_history (default is 500)
+export HISTSIZE=10000
+# Append instead of overwriting when recording history.
+shopt -s histappend
+# Don't store useless commands in the history.
+export HISTIGNORE="fg"
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
+# Erase duplicates when writing the history files (I think).
+export HISTCONTROL=erasedups
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -17,55 +25,11 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-xterm-color)
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    ;;
-*)
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    ;;
-esac
-
-# Comment in the above and uncomment this below for a color prompt
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-    ;;
-*)
-    ;;
-esac
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-
-# Change the window title of X terminals 
-case ${TERM} in
-	xterm*|rxvt*|Eterm|aterm|kterm|gnome)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-		;;
-	screen)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-		;;
-esac
-
-# Keep 1000 lines in .bash_history (default is 500)
-export HISTSIZE=1000
-export HISTFILESIZE=1000
-
-export HISTIGNORE="fg"
-export HISTCONTROL=ignoredups
-
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -90,8 +54,7 @@ fi
 
 set completion-ignore-case On
 
-# bash-prompt hacks
- 
+# Highly customised bash promt grabbed from somewhere I don't remember.
 function setprompt {
     local COLOUR1="\[\033[1;30m\]"
     local COLOUR2="\[\033[0;36m\]"
@@ -115,8 +78,6 @@ $COLOUR1-$COLOUR2($NO_COLOUR\w$COLOUR2)$COLOUR1-\n\
 $COLOUR1-$COLOUR2($NO_COLOUR\$ " 
 }
 
-
-
 export PATH=/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
 export PAGER=less
 export LESS=-r
@@ -124,3 +85,4 @@ export EDITOR=/usr/bin/vim
 export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
 
 setprompt
+
