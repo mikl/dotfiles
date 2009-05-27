@@ -5,6 +5,6 @@ set columns=85 " 80 cols is fine. Might need more for sidebar
 set guifont=ProFontX:h12
 
 " GUIoptions - see help 'go for more information
-set guioptions=aAcemg
+set guioptions=cemg
 "set noantialias
 
