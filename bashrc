@@ -17,6 +17,10 @@ export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth
 # Erase duplicates when writing the history files (I think).
 export HISTCONTROL=erasedups
+# Case-insensitive tab-completion
+set completion-ignore-case On
+# Configure bash to use vi editing of the command line
+set -o vi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -47,12 +51,31 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Macports bash completion :)
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+# VirtualEnv wrapper for Django work
+if [ -d ~/bin/virtualenvwrapper ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source ~/bin/virtualenvwrapper/virtualenvwrapper_bashrc
 fi
 
-set completion-ignore-case On
+# OS-specific stuff
+case `uname -a | awk '{print $1}'` in
+    'Darwin') # Mac OS X
+        # MacPorts binary paths.
+        export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
+        
+        # Only setting the drupal.org CVS root on my Mac
+        export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
+        
+        # Macports bash completion :)
+        if [ -f /opt/local/etc/bash_completion ]; then
+            . /opt/local/etc/bash_completion
+        fi
+        
+        if [ -d /opt/local/share/man ]; then
+            export MANPATH=/opt/local/share/man:$MANPATH
+        fi
+    ;;
+esac
 
 # Highly customised bash promt grabbed from somewhere I don't remember.
 function setprompt {
@@ -78,11 +101,8 @@ $COLOUR1-$COLOUR2($NO_COLOUR\w$COLOUR2)$COLOUR1-\n\
 $COLOUR1-$COLOUR2($NO_COLOUR\$ " 
 }
 
-export PATH=/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
 export PAGER=less
 export LESS=-r
 export EDITOR=/usr/bin/vim
-export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
 
 setprompt
-
