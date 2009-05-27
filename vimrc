@@ -98,8 +98,6 @@ set foldlevel=100 " Don't autofold
 " CTags "
 """""""""
 nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Ctags_Cmd="/usr/bin/ctags"
-
 
 """""""""""""""""""""""""""""""
 " File explorer configuration "
