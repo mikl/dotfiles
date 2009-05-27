@@ -29,6 +29,10 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
+# Default pager and editor setting.
+export PAGER=less
+export LESS=-r
+export EDITOR=/usr/bin/vim
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
@@ -57,7 +61,7 @@ if [ -d ~/bin/virtualenvwrapper ]; then
     source ~/bin/virtualenvwrapper/virtualenvwrapper_bashrc
 fi
 
-# OS-specific stuff
+# OS-specific overrides.
 case `uname -a | awk '{print $1}'` in
     'Darwin') # Mac OS X
         # MacPorts binary paths.
@@ -73,6 +77,11 @@ case `uname -a | awk '{print $1}'` in
         
         if [ -d /opt/local/share/man ]; then
             export MANPATH=/opt/local/share/man:$MANPATH
+        fi
+    ;;
+    'FreeBSD')
+        if [ -f /usr/local/bin/vim ]; then
+            export EDITOR=/usr/local/bin/vim
         fi
     ;;
 esac
@@ -100,9 +109,5 @@ $COLOUR1-$COLOUR2($NO_COLOUR\#$COLOUR3/$NO_COLOUR$GRAD1$COLOUR2)\
 $COLOUR1-$COLOUR2($NO_COLOUR\w$COLOUR2)$COLOUR1-\n\
 $COLOUR1-$COLOUR2($NO_COLOUR\$ " 
 }
-
-export PAGER=less
-export LESS=-r
-export EDITOR=/usr/bin/vim
 
 setprompt
