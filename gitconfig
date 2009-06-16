@@ -1,25 +1,35 @@
 [core]
-	excludesfile = ~/.gitignore
-	legacyheaders = false
+  excludesfile = ~/.gitignore
+  legacyheaders = false
 [user]
-	name = Mikkel Hoegh
-	email = mikkel@hoegh.org
+  name = Mikkel Hoegh
+  email = mikkel@hoegh.org
 [format]
-	numbered = auto
+  numbered = auto
 [repack]
-	usedeltabaseoffset = true
+  usedeltabaseoffset = true
 [color]
-	ui = auto
-	interactive = auto
+  ui = auto
+  interactive = auto
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	staged = "diff --cached"
-	oneline = "log --pretty=oneline"
+  st = status
+  ci = commit
+  co = checkout
+  staged = "diff --cached"
+  oneline = "log --pretty=oneline"
+  llog = log --date=local
+  changes = diff --name-status -r
+  unadd = update-index --force-remove
 [merge]
-	tool = gvimdiff
-	summary = true
+  tool = changesapp
+[mergetool "changesapp"]
+  cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
+  keepBackup = false
+  trustExitCode = false
+[mergetool "opendiff"]
+  cmd = /usr/bin/opendiff -merge="$PWD/$MERGED" -ancestor="$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE"
+  keepBackup = false
+  trustExitCode = false
 [github]
-	user = mikl
+  user = mikl
 
