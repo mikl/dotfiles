@@ -24,11 +24,11 @@ set tenc=utf-8
 """"""""""""""""""""
 " Theme and colors "
 """"""""""""""""""""
-set background=dark " color of terminal background
+set background=light " color of terminal background
 if &t_Co > 2 || has("gui_running")
   syntax on
+  colorscheme autumn
 endif
-colorscheme desert
 
 """"""""""""""""""""""""
 " Backup configuration "
@@ -65,7 +65,7 @@ set wildmode=longest,list
 set nohlsearch
 set incsearch
 " what to show when I hit :set list
-  set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$ 
+set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$
 set scrolloff=5 " always show me the next/previous 5 lines
 set laststatus=2
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
@@ -94,11 +94,6 @@ set foldenable
 set foldmethod=indent " My files are always neatly indented
 set foldlevel=100 " Don't autofold
 
-"""""""""
-" CTags "
-"""""""""
-nnoremap <silent> <F8> :TlistToggle<CR>
-
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
@@ -109,15 +104,6 @@ function MyFileHandler(fn)
   exec "silent! !gvim -rv " . escape(a:fn,' \%#(){}&[];`"' . "'")
 endfunction
 let g:explFileHandler = 'MyFileHandler'
-
-"""""""""""""""""""""""""""""
-" Grep plugin configuration "
-"""""""""""""""""""""""""""""
-let Grep_Key = '<F10>'
-let Grep_Default_Options = '-i'
-let Grep_Default_Filelist = '*.py *.pt *.dtml'
-let Grep_Find_Path = '/usr/bin/find'
-let Grep_Xargs_Path = '/usr/bin/xargs'
 
 """""""""""""""""""""""""""""""""
 " Applies to multiple filetypes "
