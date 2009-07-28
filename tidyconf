@@ -1,0 +1,15 @@
+// My standard settings for HTML tidy
+// See http://tidy.sourceforge.net/docs/quickref.html for reference.
+clean: yes
+doctype: omit
+enclose-text: yes
+indent-spaces: 2
+indent: auto
+markup: yes
+show-warnings: yes
+show-body-only: yes
+tidy-mark: no
+uppercase-attributes: no
+uppercase-tags: no
+vertical-space: no
+wrap: 72
