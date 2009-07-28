@@ -1,3 +1,8 @@
+" Mikkel's local changes, to have our config changed for this filetype only.
+let g:po_translator='Mikkel Høgh <mikkel@hoegh.org>'
+let g:po_lang_team='Dansk'
+setlocal textwidth=0 " Prevents line-breaking.
+
 " Vim ftplugin for PO file (GNU gettext) editing.
 " Maintainer:	Aleksandar Jelenak <ajelenak AT yahoo.com>
 " Last Change:	Tue, 12 Apr 2005 13:49:55 -0400
