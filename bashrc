@@ -88,26 +88,30 @@ esac
 
 # Highly customised bash promt grabbed from somewhere I don't remember.
 function setprompt {
-    local COLOUR1="\[\033[1;30m\]"
-    local COLOUR2="\[\033[0;36m\]"
-    local COLOUR3="\[\033[0;36m\]"
-    local COLOUR4="\[\033[0;37m\]"
-    local NO_COLOUR="\[\033[0m\]"
+    # Teal colour, works on both dark and light backgrounds.
+    local sc="\[\033[0;36m\]"
+    # Remove colour
+    local nc="\[\033[0m\]"
+
 
     case $TERM in
         xterm*|rxvt*)
-            local TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+            local title='\[\033]0;\u@\h:\w\007\]'
             ;;
         *)
-            local TITLEBAR=""
+            local title=""
             ;;
     esac
 
-PS1="$TITLEBAR\
-$COLOUR1-$COLOUR2($NO_COLOUR\u$COLOUR3@$NO_COLOUR\h$COLOUR2)\
-$COLOUR1-$COLOUR2($NO_COLOUR\#$COLOUR3/$NO_COLOUR$GRAD1$COLOUR2)\
-$COLOUR1-$COLOUR2($NO_COLOUR\w$COLOUR2)$COLOUR1-\n\
-$COLOUR1-$COLOUR2($NO_COLOUR\$ " 
+    # Start with the user@host part.
+    PS1="$title$sc($nc\u$sc@$nc\h$sc)"
+    # Add command-number/job count/shell device
+    PS1="$PS1 $sc($nc\#/\j/\l$sc)"
+    # Add current dir and newline
+    PS1="$PS1 $sc($nc\w$sc)"
+    # And finally, the prompt symbol preceeded by a newline.
+    PS1="$PS1\n$nc\$ "
 }
 
 setprompt
+
