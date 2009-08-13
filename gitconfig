@@ -6,6 +6,8 @@
   email = mikkel@hoegh.org
 [format]
   numbered = auto
+[push]
+  default = matching
 [repack]
   usedeltabaseoffset = true
 [color]
@@ -21,7 +23,7 @@
   changes = diff --name-status -r
   unadd = update-index --force-remove
 [merge]
-  tool = changesapp
+  tool = opendiff
 [mergetool "changesapp"]
   cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
   keepBackup = false
