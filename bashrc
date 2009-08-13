@@ -109,8 +109,14 @@ function setprompt {
     PS1="$PS1 $sc($nc\#/\j/\l$sc)"
     # Add current dir and newline
     PS1="$PS1 $sc($nc\w$sc)"
+
+    # If available, add vcprompt to PS1.
+    if [ -f ~/bin/vcprompt ]; then
+        PS1=$PS1' $(vcprompt -f \(%n:%b%r%m%u\))'
+    fi
+
     # And finally, the prompt symbol preceeded by a newline.
-    PS1="$PS1\n$nc\$ "
+    export PS1="$PS1\n$nc\$ "
 }
 
 setprompt
