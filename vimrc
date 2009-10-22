@@ -9,17 +9,18 @@
 " General settings "
 """"""""""""""""""""
 set nocompatible " no, I'd rather not have my editor vi-compatible
-filetype on " detect the type of the file
 set history=100 " How many commands to remember
-set confirm " Gives you a confirm-dialog instead of a flat refusal
+set undolevels=150 " 1000 undolevels is more than I'll ever need.
+set noconfirm " Gives you a confirm-dialog instead of a flat refusal
 set ffs=unix,dos,mac " support all three file-format with unix no. 1
-filetype plugin on " load filetype plugins
-filetype indent on
 set viminfo+=!,h " give me viminfo, please
 set iskeyword+=_,$,@,%,#,- " these shouldn't divide words.
 set magic " Should always be on
 set enc=utf-8
 set tenc=utf-8
+filetype on " detect the type of the file
+filetype plugin on " load filetype plugins
+filetype indent on
 
 """"""""""""""""""""
 " Theme and colors "
@@ -27,7 +28,7 @@ set tenc=utf-8
 set background=light " color of terminal background
 if &t_Co > 2 || has("gui_running")
   syntax on
-  colorscheme autumn
+  colorscheme august
 endif
 
 """"""""""""""""""""""""
@@ -62,6 +63,7 @@ set showmatch
 set ignorecase
 set smartcase
 set wildmode=longest,list
+set wildignore+=*.pyc,*.DS_Store,*.db
 set nohlsearch
 set incsearch
 " what to show when I hit :set list
@@ -94,6 +96,11 @@ set foldenable
 set foldmethod=indent " My files are always neatly indented
 set foldlevel=100 " Don't autofold
 
+""""""""""""
+" Mappings "
+""""""""""""
+set pastetoggle=<f2>
+
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
@@ -105,10 +112,18 @@ function MyFileHandler(fn)
 endfunction
 let g:explFileHandler = 'MyFileHandler'
 
+""""""""""""""""""
+" Plugin options "
+""""""""""""""""""
+let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
+
 """""""""""""""""""""""""""""""""
 " Applies to multiple filetypes "
 """""""""""""""""""""""""""""""""
 au FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim 
+
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
