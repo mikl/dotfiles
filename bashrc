@@ -1,6 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# Mikkel Hoegh's bashrc. Inspired from lots of different sources.
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -19,7 +17,7 @@ export HISTCONTROL=ignoreboth
 export HISTCONTROL=erasedups
 # Case-insensitive tab-completion
 set completion-ignore-case On
-# Configure bash to use vi editing of the command line
+# Configure bash to use vi-style editing of the command line.
 set -o vi
 
 # check the window size after each command and, if necessary,
@@ -39,11 +37,7 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# Loading bash aliases from ~/.bash_aliases, instead of adding them here.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -62,10 +56,10 @@ if [ -d ~/bin/virtualenvwrapper ]; then
 fi
 
 # OS-specific overrides.
-case `uname -a | awk '{print $1}'` in
+case `uname -s` in
     'Darwin') # Mac OS X
         # MacPorts binary paths.
-        export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql83/bin/:$PATH
+        export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/apache2/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/postgresql84/bin/:$PATH
         
         # Only setting the drupal.org CVS root on my Mac
         export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
