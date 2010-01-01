@@ -4,6 +4,11 @@
 " Inspired by http://vi-improved.org/vimrc.php
 " Please feel free to copy this if you'd like to.
 
+" Start with loading our bundles via pathogen.
+runtime! autoload/pathogen.vim
+if exists('g:loaded_pathogen')
+  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
+end
 
 """"""""""""""""""""
 " General settings "
@@ -107,10 +112,6 @@ set pastetoggle=<f2>
 let g:explDetailedList=0
 let g:explWinSize=5
 let g:explHideFiles='^\.,\.pyc$'
-function MyFileHandler(fn)
-  exec "silent! !gvim -rv " . escape(a:fn,' \%#(){}&[];`"' . "'")
-endfunction
-let g:explFileHandler = 'MyFileHandler'
 
 """"""""""""""""""
 " Plugin options "
@@ -121,6 +122,13 @@ let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
 " Applies to multiple filetypes "
 """""""""""""""""""""""""""""""""
 au FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim 
+
+"""""""""""""""""""
+" Misc. functions "
+"""""""""""""""""""
+function! s:rstrip ()
+  exec '%s/\v\s+$//'
+endfunction
 
 " automatically leave insert mode after 'updatetime' milliseconds of inaction
 au CursorHoldI * stopinsert
