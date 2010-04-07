@@ -10,6 +10,11 @@ if exists('g:loaded_pathogen')
   call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
 end
 
+" Because the system might have switched filetype detection on before
+" our bundles were loaded, we switch it off and switch it on again.
+filetype off
+filetype plugin indent on
+
 """"""""""""""""""""
 " General settings "
 """"""""""""""""""""
@@ -21,11 +26,8 @@ set ffs=unix,dos,mac " support all three file-format with unix no. 1
 set viminfo+=!,h " give me viminfo, please
 set iskeyword+=_,$,@,%,#,- " these shouldn't divide words.
 set magic " Should always be on
-set enc=utf-8
-set tenc=utf-8
-filetype on " detect the type of the file
-filetype plugin on " load filetype plugins
-filetype indent on
+set encoding=utf-8 " Force UTF-8 as default
+set termencoding=utf-8 " Also for terminals.
 
 """"""""""""""""""""
 " Theme and colors "
