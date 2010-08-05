@@ -62,6 +62,7 @@ set report=0 " Tell me how many lines commands change. Always.
 set noerrorbells " I hate console beeps.
 set visualbell
 set showcmd
+set noshowmatch " Don't jump cursor to matching brace.
 
 """""""""""""""
 " Visual cues "
@@ -120,10 +121,14 @@ let g:explHideFiles='^\.,\.pyc$'
 """"""""""""""""""
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
 
-"""""""""""""""""""""""""""""""""
-" Applies to multiple filetypes "
-"""""""""""""""""""""""""""""""""
-au FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim 
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Applies to multiple filetypes "
+  autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim
+
+  " automatically leave insert mode after 'updatetime' milliseconds of inaction
+  autocmd CursorHoldI * stopinsert
+endif
 
 """""""""""""""""""
 " Misc. functions "
@@ -132,8 +137,6 @@ function! s:rstrip ()
   exec '%s/\v\s+$//'
 endfunction
 
-" automatically leave insert mode after 'updatetime' milliseconds of inaction
-au CursorHoldI * stopinsert
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
