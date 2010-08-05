@@ -58,6 +58,12 @@ fi
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
+        # Make sure /usr/local/bin takes precendence over /usr/bin
+        PATH=/usr/local/bin:"${PATH}"
+
+        # Add our Homebrew Python bin.
+        PATH=/usr/local/Cellar/python/2.7/bin:"${PATH}"
+
         # Only setting the drupal.org CVS root on my Mac
         export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
 
