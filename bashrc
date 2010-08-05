@@ -67,7 +67,10 @@ case `uname -s` in
     ;;
     'FreeBSD')
         if [ -f /usr/local/bin/vim ]; then
+            # Use VIM from ports if available.
             export EDITOR=/usr/local/bin/vim
+            # Set FreeBSD package mirror.
+            export PACKAGEROOT=http://ftp.dk.freebsd.org
         fi
     ;;
 esac
