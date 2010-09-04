@@ -49,6 +49,30 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
+bindkey '^R' history-incremental-search-backward
+
+# Command completion
+autoload -U compinit
+compinit
+setopt extendedglob
+unsetopt CASE_GLOB
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+
+# Completion options
+zstyle ':completion:*:match:*' original only
+zstyle ':completion::prefix-1:*' completer _complete
+zstyle ':completion:predict:*' completer _complete
+zstyle ':completion:incremental:*' completer _complete _correct
+zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
+
+# Path Expansion
+zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*' squeeze-shlashes 'yes'
+zstyle ':completion::complete:*' '\\'
+
+zstyle ':completion:*:*:*:default' menu yes select
+zstyle ':completion:*:*:default' force-list always
 
 # Misc. settings
 unsetopt beep # Disable console beeps.
