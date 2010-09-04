@@ -52,8 +52,7 @@ setopt appendhistory hist_ignore_all_dups hist_ignore_space
 bindkey '^R' history-incremental-search-backward
 
 # Command completion
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 setopt extendedglob
 unsetopt CASE_GLOB
 zstyle ':completion::complete:*' use-cache on
@@ -80,7 +79,14 @@ bindkey -v # VI-style keybindings
 setopt autocd correctall  notify
 
 # Configure the prompt
-autoload -U promptinit
-promptinit
-prompt walters
+autoload -U promptinit && promptinit
+setopt prompt_subst
+
+export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F{cyan}(%f%~%F{cyan})%f
+%# "
+
+# If available, add vcprompt to RPROMPT.
+if [ -f ~/bin/vcprompt ]; then
+    export RPROMPT='%F{cyan}$(vcprompt -f \(%n:%b%r%m%u\))%f'
+fi
 
