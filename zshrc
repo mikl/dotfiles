@@ -44,6 +44,11 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
+# Use the same aliases as bash.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # Command history
 HISTFILE=~/.histfile
 HISTSIZE=10000
