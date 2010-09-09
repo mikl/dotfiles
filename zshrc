@@ -54,7 +54,11 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
-bindkey '^R' history-incremental-search-backward
+
+# Keybindings
+bindkey -v # VI-style keybindings
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
 
 # Command completion
 autoload -U compinit && compinit
@@ -82,7 +86,6 @@ zstyle ':completion:*:*:default' force-list always
 
 # Misc. settings
 unsetopt beep # Disable console beeps.
-bindkey -v # VI-style keybindings
 setopt autocd notify
 
 # Configure the prompt
