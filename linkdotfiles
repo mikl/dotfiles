@@ -48,10 +48,7 @@ for filename in files:
             continue
 
     print 'Creating a link to %s at %s.' % (source, destination)
-    if os.path.isdir(source):
-        os.symlink(source, destination)
-    else:
-        os.link(source, destination)
+    os.symlink(source, destination)
 
 print 'Done.'
 
