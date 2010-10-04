@@ -4,6 +4,9 @@
 " Inspired by http://vi-improved.org/vimrc.php
 " Please feel free to copy this if you'd like to.
 
+" Disabling vi-compatibilty is the first thing to do.
+set nocompatible
+
 " Start with loading our bundles via pathogen.
 runtime! autoload/pathogen.vim
 if exists('g:loaded_pathogen')
@@ -18,8 +21,7 @@ filetype plugin indent on
 """"""""""""""""""""
 " General settings "
 """"""""""""""""""""
-set nocompatible " no, I'd rather not have my editor vi-compatible
-set history=100 " How many commands to remember
+set history=1000 " How many commands to remember
 set undolevels=150 " 1000 undolevels is more than I'll ever need.
 set noconfirm " Gives you a confirm-dialog instead of a flat refusal
 set ffs=unix,dos,mac " support all three file-format with unix no. 1
@@ -86,13 +88,13 @@ set showmode
 """"""""""""""""""""""""""""""
 " Text formatting and layout "
 """"""""""""""""""""""""""""""
-set formatoptions=tcroqn
 set autoindent
 set smartindent
 set cindent
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab " I prefer spaces to tabs.
 set smarttab
 set textwidth=72
