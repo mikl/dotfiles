@@ -76,3 +76,15 @@ if [ -f ~/bin/vcprompt ]; then
     export RPROMPT='%F{cyan}$(vcprompt -f \(%n:%b%r%m%u\))%f'
 fi
 
+# Setting window title.
+case $TERM in
+  sun-cmd)
+    precmd () { print -Pn "\e]l%~\e\\" }
+    preexec () { print -Pn "\e]l%~\e\\" }
+    ;;
+  *xterm*|rxvt|(dt|k|E)term)
+    precmd () { print -Pn "\e]2;%n@%m:%~\a" }
+    preexec () { print -Pn "\e]2;%n@%m:%~\a" }
+    ;;
+esac
+
