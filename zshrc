@@ -60,30 +60,6 @@ bindkey -v # VI-style keybindings
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
-# Command completion
-autoload -U compinit && compinit
-setopt extendedglob
-unsetopt CASE_GLOB
-zstyle ':completion::complete:*' use-cache on
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
-
-# Completion options
-zstyle ':completion:*:match:*' original only
-zstyle ':completion::prefix-1:*' completer _complete
-zstyle ':completion:predict:*' completer _complete
-zstyle ':completion:incremental:*' completer _complete _correct
-zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-#zstyle ':completion:*:descriptions' format "- %d -"
-
-# Path Expansion
-zstyle ':completion:*' expand 'yes'
-zstyle ':completion:*' squeeze-slashes 'yes'
-zstyle ':completion::complete:*' '\\'
-
-zstyle ':completion:*:*:*:default' menu yes select
-zstyle ':completion:*:*:default' force-list always
-
 # Misc. settings
 unsetopt beep # Disable console beeps.
 setopt autocd notify
