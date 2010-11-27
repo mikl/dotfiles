@@ -102,14 +102,47 @@ set textwidth=72
 """""""""""
 " Folding "
 """""""""""
-set foldenable 
+set foldenable
 set foldmethod=indent " My files are always neatly indented
 set foldlevel=100 " Don't autofold
+
+"""""""""""""""""""
+" Misc. functions "
+"""""""""""""""""""
+
+" Helper function to preserve search history and cursor position while
+" executing some command.
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
 
 """"""""""""
 " Mappings "
 """"""""""""
 set pastetoggle=<f2>
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Quick reload of ~/.vimrc
+nmap <leader>R :source ~/.vimrc<CR>
+
+" Strip trailing spaces
+nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
+
+" Make VIM reformat the entire file
+nmap <leader>= :call Preserve("normal gg=G")<CR>
+
+" Open/close NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""
 " File explorer configuration "
@@ -131,13 +164,6 @@ if has("autocmd")
   " automatically leave insert mode after 'updatetime' milliseconds of inaction
   autocmd CursorHoldI * stopinsert
 endif
-
-"""""""""""""""""""
-" Misc. functions "
-"""""""""""""""""""
-function! s:rstrip ()
-  exec '%s/\v\s+$//'
-endfunction
 
 
 " Security fix: modelines have been an avenue for trojan attacks against
