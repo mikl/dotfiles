@@ -77,7 +77,7 @@ set wildignore+=*.pyc,*.DS_Store,*.db
 set nohlsearch
 set incsearch
 " what to show when I hit :set list
-set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$
+set listchars=eol:¬,tab:▸\ ,trail:.,extends:>,precedes:<,nbsp:⁝
 set scrolloff=5 " always show me the next/previous 5 lines
 set laststatus=2
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %{fugitive#statusline()}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
