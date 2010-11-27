@@ -132,8 +132,8 @@ set pastetoggle=<f2>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
-" Quick reload of ~/.vimrc
-nmap <leader>R :source ~/.vimrc<CR>
+" Quick editing of vimrc
+nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Strip trailing spaces
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
@@ -161,10 +161,12 @@ if has("autocmd")
   " Applies to multiple filetypes "
   autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim
 
-  " automatically leave insert mode after 'updatetime' milliseconds of inaction
+  " Automatically leave insert mode after 'updatetime' milliseconds of inaction
   autocmd CursorHoldI * stopinsert
-endif
 
+  " Reload vimrc files everytime they're saved.
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
