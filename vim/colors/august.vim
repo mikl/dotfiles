@@ -1,12 +1,12 @@
 " Vim color file
 " Maintainer: Mikkel Høgh <mikkelWANTSNOSPAM@hoegh.org>
-" Last Change: 2009-08-05
-" Version: 0.1
+" Last Change: 2010-11-27
+" Version: 0.3
 
 " This is based upon the autumn.vim colours.
 " This color scheme uses a light background.
 set background=light
-hi clear
+highlight clear
 if exists("syntax_on")
    syntax reset
 endif
@@ -41,7 +41,7 @@ hi DiffAdd      gui=NONE guifg=#ff2020 guibg=#eaf2b0
 " Cursor
 hi Cursor       gui=NONE guifg=#ffffff guibg=#0080f0
 hi lCursor      gui=NONE guifg=#ffffff guibg=#8040ff
-hi CursorIM     gui=NONE guifg=#ffffff guibg=#8040ff
+hi link CursorIM lCursor
 
 " Current line highlight.
 hi CursorLine   gui=NONE guifg=NONE    guibg=#e5e5e5
@@ -54,7 +54,7 @@ hi FoldColumn   gui=NONE guifg=#a05040 guibg=#f8d8c4
 hi Directory    gui=NONE guifg=#7050ff guibg=NONE
 hi LineNr       gui=NONE guifg=#e0b090 guibg=#ffe4d4
 hi NonText      gui=NONE guifg=#e0b090 guibg=NONE
-hi SpecialKey   gui=NONE guifg=#e0b090 guibg=NONE
+hi link SpecialKey NonText
 hi Title        gui=BOLD guifg=fg      guibg=NONE
 hi Visual       gui=NONE guifg=#804020 guibg=#ffc0a0
 " hi VisualNOS  gui=NONE guifg=#604040 guibg=#e8dddd
