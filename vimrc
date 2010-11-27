@@ -132,8 +132,14 @@ set pastetoggle=<f2>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
+" Quick reload of vimrc
+nmap <leader>R :source $MYVIMRC<CR>
+
 " Quick editing of vimrc
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" Quick editing of august theme
+nmap <leader>A :tabedit ~/.vim/colors/august.vim<CR>
 
 " Strip trailing spaces
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
@@ -165,7 +171,11 @@ if has("autocmd")
   autocmd CursorHoldI * stopinsert
 
   " Reload vimrc files everytime they're saved.
-  autocmd bufwritepost .vimrc source $MYVIMRC
+  " Disabled temporarily, since it seems to make my Vim lock up.
+  " autocmd bufwritepost .vimrc source $MYVIMRC
+
+  " Reload august colorscheme when saved.
+  autocmd bufwritepost august.vim colorscheme august
 endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
