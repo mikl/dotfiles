@@ -43,6 +43,9 @@ hi Cursor       gui=NONE guifg=#ffffff guibg=#0080f0
 hi lCursor      gui=NONE guifg=#ffffff guibg=#8040ff
 hi CursorIM     gui=NONE guifg=#ffffff guibg=#8040ff
 
+" Current line highlight.
+hi CursorLine   gui=NONE guifg=NONE    guibg=#e5e5e5
+
 " Fold
 hi Folded       gui=NONE guifg=#804030 guibg=#ffc0a0
 hi FoldColumn   gui=NONE guifg=#a05040 guibg=#f8d8c4
@@ -50,8 +53,8 @@ hi FoldColumn   gui=NONE guifg=#a05040 guibg=#f8d8c4
 " Other
 hi Directory    gui=NONE guifg=#7050ff guibg=NONE
 hi LineNr       gui=NONE guifg=#e0b090 guibg=#ffe4d4
-hi NonText      gui=NONE guifg=#a05040 guibg=#ffe4d4
-hi SpecialKey   gui=NONE guifg=#0080ff guibg=NONE
+hi NonText      gui=NONE guifg=#e0b090 guibg=NONE
+hi SpecialKey   gui=NONE guifg=#e0b090 guibg=NONE
 hi Title        gui=BOLD guifg=fg      guibg=NONE
 hi Visual       gui=NONE guifg=#804020 guibg=#ffc0a0
 " hi VisualNOS  gui=NONE guifg=#604040 guibg=#e8dddd
