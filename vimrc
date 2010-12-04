@@ -150,6 +150,9 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 " Open/close NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
 
+" sudo save this file
+nmap <leader>S :w !sudo tee %
+
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
