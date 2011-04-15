@@ -64,8 +64,8 @@ case `uname -s` in
         # Add our Homebrew Python bin.
         PATH=/usr/local/Cellar/python/2.7/bin:"${PATH}"
 
-        # Only setting the drupal.org CVS root on my Mac
-        export CVSROOT=:pserver:mikl@cvs.drupal.org:/cvs/drupal-contrib
+        # Set path to NodeJS packages.
+        export NODE_PATH=/usr/local/lib/node
 
         if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
             export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
