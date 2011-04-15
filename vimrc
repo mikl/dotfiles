@@ -37,7 +37,7 @@ set termencoding=utf-8 " Also for terminals.
 set background=light " color of terminal background
 if &t_Co > 2 || has("gui_running")
   syntax on
-  colorscheme august
+  colorscheme solarized
 endif
 
 """"""""""""""""""""""""
