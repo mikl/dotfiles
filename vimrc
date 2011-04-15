@@ -128,6 +128,7 @@ endfunction
 " Mappings "
 """"""""""""
 set pastetoggle=<f2>
+let mapleader = ","
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
