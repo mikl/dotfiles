@@ -10,7 +10,7 @@ set nocompatible
 " Start with loading our bundles via pathogen.
 runtime! autoload/pathogen.vim
 if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
+  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundle'))
 end
 
 " Because the system might have switched filetype detection on before
