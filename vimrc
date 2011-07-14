@@ -152,6 +152,7 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 
 " sudo save this file
+cmap w!! %!sudo tee > /dev/null %
 nmap <leader>S :w !sudo tee %<CR>
 
 """""""""""""""""""""""""""""""
