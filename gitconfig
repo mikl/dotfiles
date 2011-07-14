@@ -1,9 +1,10 @@
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/mikl/.gitignore
   legacyheaders = false
+	quotepath = false
 [user]
-  name = Mikkel Hoegh
-  email = mikkel@hoegh.org
+	name = Mikkel Hoegh
+	email = mikkel@hoegh.org
 [format]
   numbered = auto
 [push]
