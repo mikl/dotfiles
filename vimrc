@@ -139,9 +139,6 @@ nmap <leader>R :source $MYVIMRC<CR>
 " Quick editing of vimrc
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
-" Quick editing of august theme
-nmap <leader>A :tabedit ~/.vim/colors/august.vim<CR>
-
 " Strip trailing spaces
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 
