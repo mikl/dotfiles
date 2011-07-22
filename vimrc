@@ -10,7 +10,7 @@ set nocompatible
 " Start with loading vim-addon-manager, if available.
 if isdirectory(expand("~/.vim/managed-addons/vim-addon-manager"))
   set runtimepath+=~/.vim/managed-addons/vim-addon-manager
-  call vam#ActivateAddons(['Command-T', 'Markdown', 'Solarized', 'Syntastic', 'The_NERD_Commenter', 'The_NERD_tree', 'ack', 'delimitMate', 'fugitive', 'git.zip', 'jade', 'ragtag', 'surround', 'unimpaired' ], {'auto_install' : 0})
+  call vam#ActivateAddons(['Command-T', 'Markdown', 'Solarized', 'Syntastic', 'The_NERD_Commenter', 'The_NERD_tree', 'ack', 'closetag', 'delimitMate', 'fugitive', 'git.zip', 'jade', 'ragtag', 'snipmate-snippets', 'surround', 'unimpaired' ], {'auto_install' : 0})
 endif
 
 """"""""""""""""""""
