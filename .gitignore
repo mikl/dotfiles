@@ -3,6 +3,7 @@
 /vim/backup/*
 /vim/bundle/
 /vim/doc/tags
+/vim/managed-addons/
 /vim/sessions/
 /vim/temp/*
 

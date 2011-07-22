@@ -7,16 +7,11 @@
 " Disabling vi-compatibilty is the first thing to do.
 set nocompatible
 
-" Start with loading our bundles via pathogen.
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundle'))
-end
-
-" Because the system might have switched filetype detection on before
-" our bundles were loaded, we switch it off and switch it on again.
-filetype off
-filetype plugin indent on
+" Start with loading vim-addon-manager, if available.
+if isdirectory(expand("~/.vim/managed-addons/vim-addon-manager"))
+  set runtimepath+=~/.vim/managed-addons/vim-addon-manager
+  call vam#ActivateAddons(['Command-T', 'Markdown', 'Solarized', 'Syntastic', 'The_NERD_Commenter', 'The_NERD_tree', 'ack', 'delimitMate', 'fugitive', 'git.zip', 'jade', 'ragtag', 'surround', 'unimpaired' ], {'auto_install' : 0})
+endif
 
 """"""""""""""""""""
 " General settings "
