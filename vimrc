@@ -177,9 +177,6 @@ if has("autocmd")
   " Reload vimrc files everytime they're saved.
   " Disabled temporarily, since it seems to make my Vim lock up.
   " autocmd bufwritepost .vimrc source $MYVIMRC
-
-  " Reload august colorscheme when saved.
-  autocmd bufwritepost august.vim colorscheme august
 endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
