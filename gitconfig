@@ -8,7 +8,7 @@
 [format]
   numbered = auto
 [push]
-  default = matching
+  default = upstream
 [repack]
   usedeltabaseoffset = true
 [color]
