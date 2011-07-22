@@ -179,6 +179,9 @@ if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+" Disable delimitMate on certain filetypes.
+autocmd FileType mail,vim let b:loaded_delimitMate = 1
+
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
 set nomodeline
