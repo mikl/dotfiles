@@ -19,7 +19,7 @@ fi
 case `uname -s` in
     'Darwin') # Mac OS X
         # Make sure /usr/local/bin takes precendence over /usr/bin
-        PATH=/usr/local/bin:"${PATH}"
+        PATH=/usr/local/sbin:/usr/local/bin:"${PATH}"
 
         # Add our Homebrew Python bin.
         PATH=/usr/local/Cellar/python/2.7/bin:"${PATH}"
