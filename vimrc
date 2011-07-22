@@ -164,6 +164,7 @@ let g:explHideFiles='^\.,\.pyc$'
 " Plugin options "
 """"""""""""""""""
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
+let delimitMate_expand_cr = 1
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
