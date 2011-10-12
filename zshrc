@@ -22,7 +22,10 @@ case `uname -s` in
         PATH=/usr/local/sbin:/usr/local/bin:"${PATH}"
 
         # Add our Homebrew Python bin.
-        PATH=/usr/local/Cellar/python/2.7/bin:"${PATH}"
+        PATH=/usr/local/share/python:"${PATH}"
+
+        # Use vimpager.
+        export PAGER=vimpager
 
         # Set path to NodeJS packages.
         export NODE_PATH=/usr/local/lib/node
