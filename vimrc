@@ -182,7 +182,6 @@ let g:explHideFiles='^\.,\.pyc$'
 " Plugin options "
 """"""""""""""""""
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
-let delimitMate_expand_cr = 1
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -196,9 +195,6 @@ if has("autocmd")
   " Disabled temporarily, since it seems to make my Vim lock up.
   " autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
-" Disable delimitMate on certain filetypes.
-autocmd FileType mail,vim let b:loaded_delimitMate = 1
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
