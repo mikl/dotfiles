@@ -9,7 +9,27 @@ set nocompatible
 
 let vam_install_path = expand('$HOME') . '/.vim/managed-addons'
 exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
-call vam#ActivateAddons(['Command-T', 'The_NERD_tree', 'git.zip', 'surround', 'Markdown', 'ack', 'jade', 'tlib', 'PHP-correct-Indenting', 'closetag', 'php2548', 'unimpaired', 'Solarized', 'comments1528', 'ragtag', 'Syntastic', 'delimitMate', 'snipmate', 'The_NERD_Commenter', 'fugitive', 'snipmate-snippets'], {'auto_install' : 1})
+call vam#ActivateAddons([
+      \ 'Command-T',
+      \ 'Markdown',
+      \ 'PHP-correct-Indenting',
+      \ 'Solarized',
+      \ 'Syntastic',
+      \ 'The_NERD_Commenter',
+      \ 'The_NERD_tree',
+      \ 'ack', 
+      \ 'closetag',
+      \ 'comments1528',
+      \ 'fugitive',
+      \ 'git.zip',
+      \ 'jade',
+      \ 'php2548',
+      \ 'ragtag',
+      \ 'snipMate',
+      \ 'snipmate-snippets',
+      \ 'surround',
+      \ 'unimpaired'
+\], {'auto_install' : 1})
 
 """"""""""""""""""""
 " General settings "
