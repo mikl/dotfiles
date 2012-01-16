@@ -182,6 +182,10 @@ let g:explHideFiles='^\.,\.pyc$'
 """"""""""""""""""
 " Plugin options "
 """"""""""""""""""
+
+" Use CSS when exporting HTML
+let html_use_css = 1
+
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
 
 " Syntastic settings.
