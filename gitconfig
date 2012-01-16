@@ -36,3 +36,5 @@
 [github]
   user = mikl
 
+[mergetool]
+	keepBackup = false
