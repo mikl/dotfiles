@@ -197,7 +197,7 @@ let g:syntastic_jslint_conf=" --browser --goodparts --node --white --nosummary -
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " Applies to multiple filetypes "
-  autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/scripts/closetag.vim
+  autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/managed-addons/closetag/plugin/closetag.vim
 
   " Automatically leave insert mode after 'updatetime' milliseconds of inaction
   autocmd CursorHoldI * stopinsert
