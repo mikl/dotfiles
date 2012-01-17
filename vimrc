@@ -17,11 +17,12 @@ call vam#ActivateAddons([
       \ 'Syntastic',
       \ 'The_NERD_Commenter',
       \ 'The_NERD_tree',
-      \ 'ack', 
+      \ 'ack',
       \ 'closetag',
       \ 'comments1528',
       \ 'fugitive',
       \ 'git.zip',
+      \ 'github:Lokaltog/vim-powerline',
       \ 'jade',
       \ 'php2548',
       \ 'ragtag',
@@ -95,14 +96,6 @@ set listchars=eol:¬,tab:▸\ ,trail:.,extends:>,precedes:<,nbsp:⁝
 set scrolloff=5 " always show me the next/previous 5 lines
 set laststatus=2
 set cursorline
-
-" Use Fugitive in the status line if available.
-if exists('g:loaded_fugitive')
-  set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %{fugitive#statusline()}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
-else
-  set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
-endif
-
 set showmode
 
 """"""""""""""""""""""""""""""
