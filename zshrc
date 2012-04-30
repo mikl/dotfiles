@@ -7,7 +7,7 @@ export EDITOR=vim
 export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
-export TERM=screen
+export TERM=screen-256color
 
 # VirtualEnv wrapper for Django work
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -78,16 +78,4 @@ export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F
 if [ -f ~/bin/vcprompt ]; then
     export RPROMPT='%F{cyan}$(vcprompt -f \(%n:%b%r%m%u\))%f'
 fi
-
-# Setting window title.
-case $TERM in
-  sun-cmd)
-    precmd () { print -Pn "\e]l%~\e\\" }
-    preexec () { print -Pn "\e]l%~\e\\" }
-    ;;
-  *xterm*|rxvt|(dt|k|E)term)
-    precmd () { print -Pn "\e]2;%n@%m:%~\a" }
-    preexec () { print -Pn "\e]2;%n@%m:%~\a" }
-    ;;
-esac
 
