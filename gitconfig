@@ -2,6 +2,7 @@
 	excludesfile = /Users/mikl/.gitignore
   legacyheaders = false
 	quotepath = false
+	autocrlf = input
 [user]
 	name = Mikkel Hoegh
 	email = mikkel@hoegh.org
