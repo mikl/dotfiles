@@ -25,17 +25,11 @@
   changes = diff --name-status -r
   unadd = update-index --force-remove
 [merge]
-  tool = opendiff
-[mergetool "changesapp"]
-  cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
-  keepBackup = false
-  trustExitCode = false
-[mergetool "opendiff"]
-  cmd = /usr/bin/opendiff -merge="$PWD/$MERGED" -ancestor="$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE"
-  keepBackup = false
-  trustExitCode = false
+	tool = vimdiff
+	conflictstyle = diff3
 [github]
   user = mikl
 
 [mergetool]
 	keepBackup = false
+	prompt = false
