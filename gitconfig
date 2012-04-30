@@ -33,3 +33,10 @@
 [mergetool]
 	keepBackup = false
 	prompt = false
+
+# Shortcuts
+[url "ssh://git@git.drupal.org/project/"]
+    insteadOf = "drupal:"
+[url "ssh://git@git.drupal.org/sandbox/"]
+    insteadOf = "drupalsand:"
+
