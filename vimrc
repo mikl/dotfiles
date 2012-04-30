@@ -181,10 +181,9 @@ let html_use_css = 1
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
 
 " Syntastic settings.
-let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs=1
-let g:syntastic_jslint_conf=" --browser --goodparts --node --white --nosummary --unix_mode --nodebug_indentation --nobeep "
+let g:syntastic_enable_signs=1 " Enable markers on the line containing a problem.
+let g:syntastic_auto_jump=0 " Dont jump to the first line with a problem
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
