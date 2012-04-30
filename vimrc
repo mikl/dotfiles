@@ -10,9 +10,9 @@ set nocompatible
 let vam_install_path = expand('$HOME') . '/.vim/managed-addons'
 exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 call vam#ActivateAddons([
-      \ 'Command-T',
       \ 'Markdown',
       \ 'PHP-correct-Indenting',
+      \ 'Powerline',
       \ 'Solarized',
       \ 'Syntastic',
       \ 'The_NERD_Commenter',
@@ -20,13 +20,12 @@ call vam#ActivateAddons([
       \ 'ack',
       \ 'closetag',
       \ 'comments%1528',
+      \ 'ctrlp',
       \ 'fugitive',
       \ 'git.zip',
-      \ 'github:Lokaltog/vim-powerline',
       \ 'jade',
       \ 'php%2548',
       \ 'ragtag',
-      \ 'snipMate',
       \ 'snipmate-snippets',
       \ 'surround',
       \ 'unimpaired'
