@@ -10,6 +10,8 @@ set nocompatible
 let vam_install_path = expand('$HOME') . '/.vim/managed-addons'
 exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 call vam#ActivateAddons([
+      \ 'DetectIndent',
+      \ 'JavaScript_Indent',
       \ 'Markdown',
       \ 'PHP-correct-Indenting',
       \ 'Powerline',
@@ -28,7 +30,8 @@ call vam#ActivateAddons([
       \ 'ragtag',
       \ 'snipmate-snippets',
       \ 'surround',
-      \ 'unimpaired'
+      \ 'unimpaired',
+      \ 'vim-json-bundle'
 \], {'auto_install' : 1})
 
 """"""""""""""""""""
