@@ -50,7 +50,7 @@ set termencoding=utf-8 " Also for terminals.
 """"""""""""""""""""
 " Theme and colors "
 """"""""""""""""""""
-set background=dark " color of terminal background
+set background=light " color of terminal background
 let g:solarized_hitrail=1 " Highlight trailing spaces.
 let g:solarized_italic=0 " Italics are less legible.
 "set t_Co=256 " I always use 256 colour terminals.
