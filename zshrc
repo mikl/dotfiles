@@ -9,12 +9,6 @@ export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
 export TERM=screen-256color
 
-# VirtualEnv wrapper for Django work
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    #source /usr/local/bin/virtualenvwrapper.sh
-fi
-
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
