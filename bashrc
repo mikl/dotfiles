@@ -49,6 +49,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# Allow Rubygems to be installed in my homedir.
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
