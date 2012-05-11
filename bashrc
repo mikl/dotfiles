@@ -49,12 +49,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# VirtualEnv wrapper for Django work
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
-
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
