@@ -46,6 +46,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Allow Rubygems to be installed in my homedir.
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
+
 # Command history
 HISTFILE=~/.histfile
 HISTSIZE=10000
