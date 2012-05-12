@@ -50,6 +50,8 @@ fi
 export GEM_HOME=$HOME/gems
 export PATH=$GEM_HOME/bin:$PATH
 
+# Load tmuxinator if available.
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # Command history
 HISTFILE=~/.histfile
