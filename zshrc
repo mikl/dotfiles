@@ -7,7 +7,6 @@ export EDITOR=vim
 export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
-export TERM=screen-256color
 
 # OS-specific overrides.
 case `uname -s` in
