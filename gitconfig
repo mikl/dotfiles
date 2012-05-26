@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/mikl/.gitignore
+	excludesfile = /home/mikl/.gitignore
   legacyheaders = false
 	quotepath = false
 	autocrlf = input
