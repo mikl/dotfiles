@@ -167,6 +167,15 @@ nmap <leader>n :NERDTreeToggle<CR>
 cmap w!! %!sudo tee > /dev/null %
 nmap <leader>S :w !sudo tee %<CR>
 
+" Easy split navigation.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Make Y behave like other capitals.
+nnoremap  Y y$
+
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
