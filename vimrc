@@ -25,6 +25,7 @@ call vam#ActivateAddons([
       \ 'ctrlp',
       \ 'fugitive',
       \ 'git.zip',
+      \ 'github:tpope/vim-eunuch',
       \ 'jade',
       \ 'php%2548',
       \ 'ragtag',
@@ -164,7 +165,6 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 
 " sudo save this file
-cmap w!! %!sudo tee > /dev/null %
 nmap <leader>S :w !sudo tee %<CR>
 
 " Easy split navigation.
