@@ -205,10 +205,6 @@ if has("autocmd")
 
   " Automatically leave insert mode after 'updatetime' milliseconds of inaction
   autocmd CursorHoldI * stopinsert
-
-  " Reload vimrc files everytime they're saved.
-  " Disabled temporarily, since it seems to make my Vim lock up.
-  " autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
