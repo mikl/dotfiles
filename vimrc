@@ -32,7 +32,8 @@ call vam#ActivateAddons([
       \ 'snipmate-snippets',
       \ 'surround',
       \ 'unimpaired',
-      \ 'vim-json-bundle'
+      \ 'vim-json-bundle',
+      \ 'vim-twig'
 \], {'auto_install' : 1})
 
 """"""""""""""""""""
