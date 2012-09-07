@@ -27,6 +27,8 @@
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+[rerere]
+	enabled = 1
 [github]
   user = mikl
 
@@ -39,4 +41,3 @@
     insteadOf = "drupal:"
 [url "ssh://git@git.drupal.org/sandbox/"]
     insteadOf = "drupalsand:"
-
