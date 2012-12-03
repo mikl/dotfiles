@@ -25,7 +25,7 @@
   changes = diff --name-status -r
   unadd = update-index --force-remove
 [merge]
-	tool = vimdiff
+	tool = Kaleidoscope
 	conflictstyle = diff3
 [rerere]
 	enabled = 1
@@ -41,3 +41,12 @@
     insteadOf = "drupal:"
 [url "ssh://git@git.drupal.org/sandbox/"]
     insteadOf = "drupalsand:"
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
