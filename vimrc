@@ -208,12 +208,8 @@ let g:syntastic_phpcs_conf='--standard=Drupal --extensions=php,module,inc,instal
 if has("autocmd")
   " Applies to multiple filetypes "
   autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/managed-addons/closetag/plugin/closetag.vim
-
-  " Automatically leave insert mode after 'updatetime' milliseconds of inaction
-  autocmd CursorHoldI * stopinsert
 endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
 set nomodeline
-
