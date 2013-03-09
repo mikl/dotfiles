@@ -20,6 +20,7 @@ call vam#ActivateAddons([
       \ 'The_NERD_Commenter',
       \ 'The_NERD_tree',
       \ 'ack',
+      \ 'commentary',
       \ 'closetag',
       \ 'ctrlp',
       \ 'fugitive',
