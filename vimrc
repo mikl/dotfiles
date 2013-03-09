@@ -195,6 +195,9 @@ let html_use_css = 1
 
 let g:snips_author = 'Mikkel Hoegh' " SnipMate full name.
 
+" Hide files we don't want to see in NERD tree.
+let NERDTreeIgnore=['\.py[co]$', '\.sass-cache', '\~$']
+
 " Syntastic settings.
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1 " Enable markers on the line containing a problem.
