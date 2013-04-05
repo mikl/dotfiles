@@ -7,36 +7,48 @@
 " Disabling vi-compatibilty is the first thing to do.
 set nocompatible
 
-let vam_install_path = expand('$HOME') . '/.vim/managed-addons'
-exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
-call vam#ActivateAddons([
-      \ 'DetectIndent',
-      \ 'JavaScript_Indent',
-      \ 'Markdown',
-      \ 'PHP-correct-Indenting',
-      \ 'Powerline',
-      \ 'Solarized',
-      \ 'Syntastic',
-      \ 'The_NERD_Commenter',
-      \ 'The_NERD_tree',
-      \ 'ack',
-      \ 'commentary',
-      \ 'closetag',
-      \ 'ctrlp',
-      \ 'fugitive',
-      \ 'git.zip',
-      \ 'github:tangledhelix/vim-octopress',
-      \ 'github:tpope/vim-eunuch',
-      \ 'git:http://git.drupal.org/project/vimrc.git',
-      \ 'jade',
-      \ 'ragtag',
-      \ 'securemodelines',
-      \ 'snipmate-snippets',
-      \ 'surround',
-      \ 'unimpaired',
-      \ 'vim-json-bundle',
-      \ 'vim-twig'
-\], {'auto_install' : 1})
+" Configure Vundle.
+if !isdirectory("~/.vim/bundle/vundle/")
+  filetype off " Vundle turns it on again.
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+
+  " let Vundle manage Vundle
+  Bundle 'gmarik/vundle'
+
+  " From Github.
+  Bundle 'Lokaltog/vim-easymotion'
+  Bundle 'Lokaltog/vim-powerline'
+  Bundle 'altercation/vim-colors-solarized'
+  Bundle 'chriskempson/base16-vim'
+  Bundle 'evidens/vim-twig'
+  Bundle 'tpope/vim-commentary'
+  Bundle 'tpope/vim-eunuch'
+  Bundle 'tpope/vim-fugitive'
+  Bundle 'tpope/vim-git'
+  Bundle 'tpope/vim-ragtag'
+  Bundle 'tpope/vim-surround'
+
+  " From other sources.
+  Bundle 'Better-Javascript-Indentation'
+  Bundle 'DetectIndent'
+  Bundle 'Enhanced-Javascript-syntax'
+  Bundle 'HTML-AutoCloseTag'
+  Bundle 'Markdown'
+  Bundle 'Markdown-syntax'
+  Bundle 'PHP-correct-Indenting'
+  Bundle 'Syntastic'
+  Bundle 'The-NERD-tree'
+  Bundle 'ack.vim'
+  Bundle 'better-snipmate-snippet'
+  Bundle 'closetag.vim'
+  Bundle 'commentary.vim'
+  Bundle 'ctrlp.vim'
+  Bundle 'securemodelines'
+  Bundle 'snipMate'
+
+  filetype plugin indent on
+endif
 
 """"""""""""""""""""
 " General settings "
