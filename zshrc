@@ -8,6 +8,11 @@ export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
 
+# Load Antigen if installed.
+if [ -f ~/.antigen/antigen.zsh ] ; then
+  source ~/.antigen/antigen.zsh
+fi
+
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
