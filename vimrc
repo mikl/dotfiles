@@ -22,6 +22,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
+  Bundle 'mikl/vim-drupal'
   Bundle 'tpope/vim-commentary'
   Bundle 'tpope/vim-eunuch'
   Bundle 'tpope/vim-fugitive'
