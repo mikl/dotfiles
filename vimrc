@@ -19,6 +19,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   " From Github.
   Bundle 'Lokaltog/vim-easymotion'
   Bundle 'Lokaltog/vim-powerline'
+  Bundle 'airblade/vim-gitgutter'
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
