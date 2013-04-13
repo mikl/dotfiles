@@ -217,9 +217,9 @@ let g:syntastic_auto_jump=0 " Dont jump to the first line with a problem
 let g:syntastic_phpcs_conf='--standard=Drupal --extensions=php,module,inc,install,test,profile,theme' " Test php,module,inc,install ... files with the Drupal CodingStandard
 
 " Only do this part when compiled with support for autocommands
-if has("autocmd")
+if !isdirectory("~/.vim/bundle/vundle/")
   " Applies to multiple filetypes "
-  autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/managed-addons/closetag/plugin/closetag.vim
+  autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 endif
 
 " Security fix: modelines have been an avenue for trojan attacks against
