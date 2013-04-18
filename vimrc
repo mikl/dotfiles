@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mikkel's vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Inspired by http://vi-improved.org/vimrc.php
+" Inspired by http://vi-improved.org/vimrc.html
 " Please feel free to copy this if you'd like to.
 
 " Disabling vi-compatibilty is the first thing to do.
