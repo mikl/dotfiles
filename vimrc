@@ -193,6 +193,13 @@ nnoremap <C-l> <C-w>l
 " Make Y behave like other capitals.
 nnoremap  Y y$
 
+" Easy access to CtrlP.
+nmap <silent> <leader>t :CtrlP<cr>
+nmap <silent> <leader>r :CtrlPBuffer<cr>
+
+" Quick Git status.
+nmap <silent> <leader>gs :Gstatus<cr>
+
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
