@@ -50,6 +50,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Use npm bindir if available.
+#
+if [ -d /usr/local/share/npm/bin ] ; then
+    PATH="${PATH}":/usr/local/share/npm/bin
+fi
+
 # Allow Rubygems to be installed in my homedir.
 export GEM_HOME=$HOME/gems
 export PATH=$GEM_HOME/bin:$PATH
