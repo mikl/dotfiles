@@ -18,9 +18,9 @@ if !isdirectory("~/.vim/bundle/vundle/")
 
   " From Github.
   Bundle 'Lokaltog/vim-easymotion'
-  Bundle 'Lokaltog/vim-powerline'
   Bundle 'airblade/vim-gitgutter'
   Bundle 'altercation/vim-colors-solarized'
+  Bundle 'bling/vim-airline'
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
   Bundle 'mikl/vim-drupal'
@@ -42,6 +42,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'Markdown-syntax'
   Bundle 'PHP-correct-Indenting'
   Bundle 'Syntastic'
+  Bundle 'SyntaxRange'
   Bundle 'The-NERD-tree'
   Bundle 'ack.vim'
   Bundle 'better-snipmate-snippet'
@@ -210,6 +211,12 @@ let g:explHideFiles='^\.,\.pyc$'
 """"""""""""""""""
 " Plugin options "
 """"""""""""""""""
+
+" Enable Airline.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_powerline_fonts=0
 
 " Use CSS when exporting HTML
 let html_use_css = 1
