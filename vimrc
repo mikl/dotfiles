@@ -48,6 +48,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'better-snipmate-snippet'
   Bundle 'closetag.vim'
   Bundle 'ctrlp.vim'
+  Bundle 'editorconfig-vim'
   Bundle 'securemodelines'
 
   filetype plugin indent on
