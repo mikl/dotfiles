@@ -231,7 +231,7 @@ let NERDTreeIgnore=['\.py[co]$', '\.sass-cache', '\~$']
 let g:NERDTreeQuitOnOpen=1
 
 " Syntastic settings.
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=2 " Don't auto-open the location list, but auto-close it.
 let g:syntastic_enable_signs=1 " Enable markers on the line containing a problem.
 let g:syntastic_auto_jump=0 " Dont jump to the first line with a problem
 let g:syntastic_phpcs_conf='--standard=Drupal --extensions=php,module,inc,install,test,profile,theme' " Test php,module,inc,install ... files with the Drupal CodingStandard
