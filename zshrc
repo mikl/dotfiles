@@ -8,6 +8,11 @@ export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
 
+# Load .profile if available.
+if [ -f ~/.profile ] ; then
+  source ~/.profile
+fi
+
 # Load Antigen if installed.
 if [ -f ~/.antigen/antigen.zsh ] ; then
   source ~/.antigen/antigen.zsh
