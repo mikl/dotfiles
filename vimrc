@@ -35,6 +35,12 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'tpope/vim-ragtag'
   Bundle 'tpope/vim-surround'
 
+  " Snipmate and dependencies.
+  Bundle "MarcWeber/vim-addon-mw-utils"
+  Bundle "tomtom/tlib_vim"
+  Bundle "garbas/vim-snipmate"
+  Bundle "honza/vim-snippets"
+
   " From other sources.
   Bundle 'Better-Javascript-Indentation'
   Bundle 'DetectIndent'
@@ -46,8 +52,6 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'Syntastic'
   Bundle 'SyntaxRange'
   Bundle 'The-NERD-tree'
-  Bundle 'ack.vim'
-  Bundle 'better-snipmate-snippet'
   Bundle 'closetag.vim'
   Bundle 'ctrlp.vim'
   Bundle 'editorconfig-vim'
