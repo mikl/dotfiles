@@ -23,6 +23,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'bling/vim-airline'
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
+  Bundle 'groenewege/vim-less'
   Bundle 'mikl/vim-drupal'
   Bundle 'nono/vim-handlebars'
   Bundle 'myusuf3/numbers.vim'
