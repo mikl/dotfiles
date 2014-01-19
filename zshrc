@@ -39,6 +39,6 @@ export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F
 %# "
 
 # If available, use liquidprompt.
-if [ -f /usr/local/bin/liquidprompt ]; then
-  .  /usr/local/bin/liquidprompt
+if [ -f /usr/local/share/liquidprompt ]; then
+  .  /usr/local/share/liquidprompt
 fi
