@@ -6,6 +6,7 @@ case `uname -s` in
 
         # Add our Homebrew Python bin.
         PATH=/usr/local/share/python:"${PATH}"
+        export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
         # Use vimpager.
         export PAGER=vimpager
