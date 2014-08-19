@@ -129,9 +129,6 @@ set showmode
 """"""""""""""""""""""""""""""
 " Text formatting and layout "
 """"""""""""""""""""""""""""""
-set autoindent
-set smartindent
-set cindent
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
