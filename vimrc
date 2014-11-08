@@ -24,7 +24,6 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
   Bundle 'groenewege/vim-less'
-  Bundle 'mikl/vim-drupal'
   Bundle 'myusuf3/numbers.vim'
   Bundle 'nono/vim-handlebars'
   Bundle 'rking/ag.vim'
@@ -56,6 +55,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'ctrlp.vim'
   Bundle 'editorconfig-vim'
   Bundle 'securemodelines'
+  Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
   filetype plugin indent on
 endif
