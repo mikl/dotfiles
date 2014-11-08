@@ -24,6 +24,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
   Bundle 'groenewege/vim-less'
+  Bundle 'jlanzarotta/bufexplorer'
   Bundle 'myusuf3/numbers.vim'
   Bundle 'nono/vim-handlebars'
   Bundle 'rking/ag.vim'
