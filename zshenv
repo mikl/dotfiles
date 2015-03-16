@@ -8,6 +8,9 @@ case `uname -s` in
         PATH=/usr/local/share/python:"${PATH}"
         export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
+        # Add Composer bin folder.
+        PATH="${HOME}/.composer/vendor/bin:${PATH}"
+
         # Use vimpager.
         export PAGER=vimpager
 
