@@ -12,7 +12,7 @@ case `uname -s` in
         export PAGER=vimpager
 
         # Set path to NodeJS packages.
-        export NODE_PATH=/usr/local/lib/node
+        export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
         if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
             export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
