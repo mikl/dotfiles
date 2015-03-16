@@ -21,6 +21,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'airblade/vim-gitgutter'
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'bling/vim-airline'
+  Bundle 'cespare/vim-toml'
   Bundle 'chriskempson/base16-vim'
   Bundle 'evidens/vim-twig'
   Bundle 'groenewege/vim-less'
