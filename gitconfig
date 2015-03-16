@@ -9,7 +9,7 @@
 [format]
   numbered = auto
 [push]
-  default = tracking
+	default = simple
 [repack]
   usedeltabaseoffset = true
 [color]
