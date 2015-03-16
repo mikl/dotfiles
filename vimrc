@@ -223,6 +223,11 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_powerline_fonts=0
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp\|temp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
+
 " Use CSS when exporting HTML
 let html_use_css = 1
 
