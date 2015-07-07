@@ -38,6 +38,11 @@ setopt prompt_subst
 export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F{cyan}(%f%~%F{cyan})%f
 %# "
 
+if [ -d ~/.nvm ]; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi
+
 # If available, use liquidprompt.
 if [ -f /usr/local/share/liquidprompt ]; then
   .  /usr/local/share/liquidprompt
