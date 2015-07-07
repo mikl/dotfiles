@@ -16,6 +16,12 @@ fi
 # Load tmuxinator if available.
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+# Support for iterm2 3.0 shell integration.
+# see http://iterm2.com/shell_integration.html
+if [ -f ~/.iterm2_shell_integration.zsh ]; then
+  source ~/.iterm2_shell_integration.zsh
+fi
+
 # Command history
 HISTFILE=~/.histfile
 HISTSIZE=10000
