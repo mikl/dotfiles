@@ -3,6 +3,7 @@
 .sass-cache
 .svn
 CVS
+npm-debug.log
 ._*
 *~
 *.py[co]
