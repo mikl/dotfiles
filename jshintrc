@@ -43,7 +43,6 @@
   "rhino"        : false,
   "undef"        : true,
   "scripturl"    : true,
-  "shadow"       : false,
   "strict"       : true,
   "sub"          : false,
   "supernew"     : false,
