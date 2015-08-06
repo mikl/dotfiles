@@ -190,7 +190,7 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 
 " sudo save this file
-nmap <leader>S :w !sudo tee %<CR>
+nmap <leader>S :SudoWrite<CR>
 
 " Easy split navigation.
 nnoremap <C-h> <C-w>h
