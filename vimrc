@@ -8,58 +8,60 @@
 set nocompatible
 
 " Configure Vundle.
-if !isdirectory("~/.vim/bundle/vundle/")
+if !isdirectory("~/.vim/bundle/Vundle.vim/")
   filetype off " Vundle turns it on again.
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
   " let Vundle manage Vundle
-  Bundle 'gmarik/vundle'
+  Plugin 'VundleVim/Vundle.vim'
 
   " From Github.
-  Bundle 'Lokaltog/vim-easymotion'
-  Bundle 'airblade/vim-gitgutter'
-  Bundle 'altercation/vim-colors-solarized'
-  Bundle 'benekastah/neomake'
-  Bundle 'bling/vim-airline'
-  Bundle 'cespare/vim-toml'
-  Bundle 'chriskempson/base16-vim'
-  Bundle 'evidens/vim-twig'
-  Bundle 'exu/pgsql.vim'
-  Bundle 'groenewege/vim-less'
-  Bundle 'jlanzarotta/bufexplorer'
-  Bundle 'myusuf3/numbers.vim'
-  Bundle 'nono/vim-handlebars'
-  Bundle 'rking/ag.vim'
-  Bundle 'tpope/vim-commentary'
-  Bundle 'tpope/vim-eunuch'
-  Bundle 'tpope/vim-fugitive'
-  Bundle 'tpope/vim-git'
-  Bundle 'tpope/vim-ragtag'
-  Bundle 'tpope/vim-surround'
+  Plugin 'Lokaltog/vim-easymotion'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'benekastah/neomake'
+  Plugin 'bling/vim-airline'
+  Plugin 'cespare/vim-toml'
+  Plugin 'chriskempson/base16-vim'
+  Plugin 'evidens/vim-twig'
+  Plugin 'exu/pgsql.vim'
+  Plugin 'groenewege/vim-less'
+  Plugin 'jlanzarotta/bufexplorer'
+  Plugin 'joonty/vdebug.git'
+  Plugin 'myusuf3/numbers.vim'
+  Plugin 'nono/vim-handlebars'
+  Plugin 'rking/ag.vim'
+  Plugin 'tpope/vim-commentary'
+  Plugin 'tpope/vim-eunuch'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'tpope/vim-git'
+  Plugin 'tpope/vim-ragtag'
+  Plugin 'tpope/vim-surround'
 
   " Snipmate and dependencies.
-  Bundle "MarcWeber/vim-addon-mw-utils"
-  Bundle "tomtom/tlib_vim"
-  Bundle "garbas/vim-snipmate"
-  Bundle "honza/vim-snippets"
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'honza/vim-snippets'
 
   " From other sources.
-  Bundle 'Better-Javascript-Indentation'
-  Bundle 'DetectIndent'
-  Bundle 'Enhanced-Javascript-syntax'
-  Bundle 'HTML-AutoCloseTag'
-  Bundle 'Markdown'
-  Bundle 'Markdown-syntax'
-  Bundle 'PHP-correct-Indenting'
-  Bundle 'SyntaxRange'
-  Bundle 'The-NERD-tree'
-  Bundle 'closetag.vim'
-  Bundle 'ctrlp.vim'
-  Bundle 'editorconfig-vim'
-  Bundle 'securemodelines'
-  Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
+  Plugin 'Better-Javascript-Indentation'
+  Plugin 'DetectIndent'
+  Plugin 'Enhanced-Javascript-syntax'
+  Plugin 'HTML-AutoCloseTag'
+  Plugin 'Markdown'
+  Plugin 'Markdown-syntax'
+  Plugin 'PHP-correct-Indenting'
+  Plugin 'SyntaxRange'
+  Plugin 'The-NERD-tree'
+  Plugin 'closetag.vim'
+  Plugin 'ctrlp.vim'
+  Plugin 'editorconfig-vim'
+  Plugin 'securemodelines'
+  Plugin 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
+  call vundle#end()
   filetype plugin indent on
 endif
 
@@ -254,7 +256,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 endif
 
-autocmd FileType javascript,php autocmd! BufWritePost * Neomake
+autocmd FileType javascript,json autocmd! BufWritePost * Neomake
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
