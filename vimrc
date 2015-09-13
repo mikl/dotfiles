@@ -20,6 +20,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'Lokaltog/vim-easymotion'
   Bundle 'airblade/vim-gitgutter'
   Bundle 'altercation/vim-colors-solarized'
+  Bundle 'benekastah/neomake'
   Bundle 'bling/vim-airline'
   Bundle 'cespare/vim-toml'
   Bundle 'chriskempson/base16-vim'
@@ -51,7 +52,6 @@ if !isdirectory("~/.vim/bundle/vundle/")
   Bundle 'Markdown'
   Bundle 'Markdown-syntax'
   Bundle 'PHP-correct-Indenting'
-  Bundle 'Syntastic'
   Bundle 'SyntaxRange'
   Bundle 'The-NERD-tree'
   Bundle 'closetag.vim'
@@ -241,11 +241,6 @@ let NERDTreeIgnore=['\.py[co]$', '\.sass-cache', '\~$']
 " Quit NERDTree as soon as you open a file.
 let g:NERDTreeQuitOnOpen=1
 
-" Syntastic settings.
-let g:syntastic_auto_loc_list=2 " Don't auto-open the location list, but auto-close it.
-let g:syntastic_enable_signs=1 " Enable markers on the line containing a problem.
-let g:syntastic_auto_jump=0 " Dont jump to the first line with a problem
-let g:syntastic_php_phpcs_args='--standard=Drupal --extensions=php,module,inc,install,test,profile,theme'
 
 " Ctrl-P settings.
 let g:ctrlp_custom_ignore = {
@@ -258,6 +253,8 @@ if !isdirectory("~/.vim/bundle/vundle/")
   " Applies to multiple filetypes "
   autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 endif
+
+autocmd FileType javascript,php autocmd! BufWritePost * Neomake
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
