@@ -32,6 +32,7 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'myusuf3/numbers.vim'
   Plugin 'nono/vim-handlebars'
   Plugin 'rking/ag.vim'
+  Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-eunuch'
   Plugin 'tpope/vim-fugitive'
