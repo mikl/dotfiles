@@ -53,3 +53,5 @@ fi
 if [ -f /usr/local/share/liquidprompt ]; then
   .  /usr/local/share/liquidprompt
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -117,3 +117,5 @@ function setprompt {
 
 setprompt
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

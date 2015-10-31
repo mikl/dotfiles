@@ -29,6 +29,7 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'groenewege/vim-less'
   Plugin 'jlanzarotta/bufexplorer'
   Plugin 'joonty/vdebug.git'
+  Plugin 'junegunn/fzf.vim'
   Plugin 'myusuf3/numbers.vim'
   Plugin 'nono/vim-handlebars'
   Plugin 'rking/ag.vim'
