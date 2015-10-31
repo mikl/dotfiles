@@ -60,7 +60,7 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'ctrlp.vim'
   Plugin 'editorconfig-vim'
   Plugin 'securemodelines'
-  Plugin 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
+  "Plugin 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
   call vundle#end()
   filetype plugin indent on
