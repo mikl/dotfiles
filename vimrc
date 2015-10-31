@@ -244,6 +244,8 @@ let NERDTreeIgnore=['\.py[co]$', '\.sass-cache', '\~$']
 " Quit NERDTree as soon as you open a file.
 let g:NERDTreeQuitOnOpen=1
 
+" Neomake settings
+let g:neomake_php_phpcs_args_standard='Drupal'
 
 " Ctrl-P settings.
 let g:ctrlp_custom_ignore = {
@@ -257,7 +259,7 @@ if !isdirectory("~/.vim/bundle/vundle/")
   autocmd FileType html,php,xml,xsl,dtd,xhtml source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 endif
 
-autocmd FileType javascript,json autocmd! BufWritePost * Neomake
+autocmd FileType javascript,json,php autocmd! BufWritePost * Neomake
 
 " Security fix: modelines have been an avenue for trojan attacks against
 " VIM-users, so we'll disable that.
