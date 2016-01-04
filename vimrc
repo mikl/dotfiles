@@ -212,6 +212,10 @@ nmap <silent> <leader>r :CtrlPBuffer<cr>
 " Quick Git status.
 nmap <silent> <leader>gs :Gstatus<cr>
 
+" This maps Leader + e to exit terminal mode. 
+" http://ryanselk.com/2015/05/19/terminals-in-neovim/
+tnoremap <Leader>e <C-\><C-n>
+
 """""""""""""""""""""""""""""""
 " File explorer configuration "
 """""""""""""""""""""""""""""""
