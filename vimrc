@@ -21,7 +21,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'airblade/vim-gitgutter'
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'benekastah/neomake'
-  Plugin 'bling/vim-airline'
   Plugin 'cespare/vim-toml'
   Plugin 'chriskempson/base16-vim'
   Plugin 'evidens/vim-twig'
@@ -40,6 +39,8 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'tpope/vim-git'
   Plugin 'tpope/vim-ragtag'
   Plugin 'tpope/vim-surround'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
 
   " Snipmate and dependencies.
   Plugin 'MarcWeber/vim-addon-mw-utils'
