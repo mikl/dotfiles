@@ -29,6 +29,8 @@
 	conflictstyle = diff3
 [rerere]
 	enabled = 1
+[rebase]
+  autoStash = 1
 [github]
   user = mikl
 
