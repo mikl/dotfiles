@@ -16,6 +16,10 @@ fi
 # Load tmuxinator if available.
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+if [ -d /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
 # Support for iterm2 3.0 shell integration.
 # see http://iterm2.com/shell_integration.html
 if [ -f ~/.iterm2_shell_integration.zsh ]; then
