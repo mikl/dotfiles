@@ -3,7 +3,7 @@
 # Environment variables.
 export CLICOLOR=1
 export COLORTERM=yes
-export EDITOR=vim
+export EDITOR=nvim
 export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
