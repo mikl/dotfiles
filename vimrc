@@ -19,8 +19,8 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   " From Github.
   Plugin 'Lokaltog/vim-easymotion'
   Plugin 'airblade/vim-gitgutter'
-  Plugin 'altercation/vim-colors-solarized'
   Plugin 'benekastah/neomake'
+  Plugin 'blueyed/vim-colors-solarized'
   Plugin 'cespare/vim-toml'
   Plugin 'chriskempson/base16-vim'
   Plugin 'evidens/vim-twig'
