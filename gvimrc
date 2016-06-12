@@ -4,3 +4,5 @@ set guifont=Consolas
 set guioptions=cemg
 "set noantialias
 
+" Use Italics in the GUI
+let g:solarized_italic=1 

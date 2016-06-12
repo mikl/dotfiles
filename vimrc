@@ -74,13 +74,9 @@ set termencoding=utf-8 " Also for terminals.
 " Theme and colors "
 """"""""""""""""""""
 let g:solarized_hitrail=1 " Highlight trailing spaces.
+let g:solarized_italic=0 " Italics are less legible.
+set background=light
 syntax enable
-if has('gui_running')
-    set background=dark
-else
-    set background=light
-    let g:solarized_italic=0 " Italics are less legible.
-endif
 colorscheme solarized
 
 """"""""""""""""""""""""
