@@ -17,16 +17,12 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'VundleVim/Vundle.vim'
 
   " From Github.
-  Plugin 'Lokaltog/vim-easymotion'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'benekastah/neomake'
   Plugin 'blueyed/vim-colors-solarized'
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'jlanzarotta/bufexplorer'
   Plugin 'joonty/vdebug.git'
   Plugin 'junegunn/fzf.vim'
   Plugin 'myusuf3/numbers.vim'
-  Plugin 'rking/ag.vim'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-eunuch'
@@ -51,13 +47,11 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'Markdown'
   Plugin 'Markdown-syntax'
   Plugin 'PHP-correct-Indenting'
-  Plugin 'SyntaxRange'
   Plugin 'The-NERD-tree'
   Plugin 'closetag.vim'
   Plugin 'ctrlp.vim'
   Plugin 'editorconfig-vim'
   Plugin 'securemodelines'
-  "Plugin 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
   call vundle#end()
   filetype plugin indent on
