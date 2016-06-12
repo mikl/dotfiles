@@ -84,11 +84,14 @@ set termencoding=utf-8 " Also for terminals.
 """"""""""""""""""""
 " Theme and colors "
 """"""""""""""""""""
-set background=light " color of terminal background
 let g:solarized_hitrail=1 " Highlight trailing spaces.
-let g:solarized_italic=0 " Italics are less legible.
-"set t_Co=256 " I always use 256 colour terminals.
 syntax enable
+if has('gui_running')
+    set background=dark
+else
+    set background=light
+    let g:solarized_italic=0 " Italics are less legible.
+endif
 colorscheme solarized
 
 """"""""""""""""""""""""
