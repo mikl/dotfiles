@@ -21,6 +21,7 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'benekastah/neomake'
   Plugin 'blueyed/vim-colors-solarized'
   Plugin 'joonty/vdebug.git'
+  Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
   Plugin 'myusuf3/numbers.vim'
   Plugin 'sheerun/vim-polyglot'
@@ -49,7 +50,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'PHP-correct-Indenting'
   Plugin 'The-NERD-tree'
   Plugin 'closetag.vim'
-  Plugin 'ctrlp.vim'
   Plugin 'editorconfig-vim'
   Plugin 'securemodelines'
 
@@ -194,9 +194,9 @@ nnoremap <C-l> <C-w>l
 " Make Y behave like other capitals.
 nnoremap  Y y$
 
-" Easy access to CtrlP.
-nmap <silent> <leader>t :CtrlP<cr>
-nmap <silent> <leader>r :CtrlPBuffer<cr>
+" Easy access to FZF.
+nmap <leader>t :Files<cr>
+nmap <leader>r :Buffers<cr>
 
 " Quick Git status.
 nmap <silent> <leader>gs :Gstatus<cr>
