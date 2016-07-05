@@ -23,7 +23,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'joonty/vdebug.git'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
-  Plugin 'myusuf3/numbers.vim'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-eunuch'
@@ -94,6 +93,7 @@ set wildmenu " better autocompletion for commands
 set ruler
 set cmdheight=2 " command-bar is 2 rows high
 set number " turn on line numbers
+set relativenumber " turn on relative line numbers
 set lazyredraw " don't redraw when running macros (speed-boost)
 set hidden " don't close buffers when switching
 set backspace=2 " don't stop me from using backspace. ever.
