@@ -20,9 +20,12 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'airblade/vim-gitgutter'
   Plugin 'benekastah/neomake'
   Plugin 'blueyed/vim-colors-solarized'
+  Plugin 'editorconfig/editorconfig-vim'
+  "Plugin 'jelera/vim-javascript-syntax' " Possibly no longer needed.
   Plugin 'joonty/vdebug.git'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
+  Plugin 'pangloss/vim-javascript'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-eunuch'
@@ -40,16 +43,9 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'honza/vim-snippets'
 
   " From other sources.
-  Plugin 'Better-Javascript-Indentation'
-  Plugin 'DetectIndent'
-  Plugin 'Enhanced-Javascript-syntax'
-  Plugin 'HTML-AutoCloseTag'
   Plugin 'Markdown'
   Plugin 'Markdown-syntax'
-  Plugin 'PHP-correct-Indenting'
   Plugin 'The-NERD-tree'
-  Plugin 'closetag.vim'
-  Plugin 'editorconfig-vim'
   Plugin 'securemodelines'
 
   call vundle#end()
