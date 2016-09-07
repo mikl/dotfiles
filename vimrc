@@ -25,6 +25,7 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'joonty/vdebug.git'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
+  Plugin 'lifepillar/vim-solarized8'
   Plugin 'pangloss/vim-javascript'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
@@ -72,7 +73,7 @@ let g:solarized_hitrail=1 " Highlight trailing spaces.
 let g:solarized_italic=0 " Italics are less legible.
 set background=light
 syntax enable
-colorscheme solarized
+colorscheme solarized8_light
 
 """"""""""""""""""""""""
 " Backup configuration "
