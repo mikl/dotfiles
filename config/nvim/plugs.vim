@@ -35,10 +35,9 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
 
-  " Snipmate and dependencies.
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'garbas/vim-snipmate'
+  " Neosnippet and dependencies.
+  Plugin 'Shougo/neosnippet.vim'
+  Plugin 'Shougo/neosnippet-snippets'
   Plugin 'honza/vim-snippets'
 
   call vundle#end()
