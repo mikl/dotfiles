@@ -12,7 +12,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
 
   " From Github.
   Plugin 'airblade/vim-gitgutter'
-  Plugin 'benekastah/neomake'
   Plugin 'blueyed/vim-colors-solarized'
   Plugin 'ciaranm/securemodelines'
   Plugin 'editorconfig/editorconfig-vim'
@@ -34,6 +33,9 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'tpope/vim-surround'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
+
+  " Neomake for code style and syntax checks.
+  Plugin 'neomake/neomake'
 
   " Neosnippet and dependencies.
   Plugin 'Shougo/neosnippet.vim'
