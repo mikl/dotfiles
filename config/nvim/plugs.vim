@@ -14,13 +14,17 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'airblade/vim-gitgutter'
   Plugin 'benekastah/neomake'
   Plugin 'blueyed/vim-colors-solarized'
+  Plugin 'ciaranm/securemodelines'
   Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'godlygeek/tabular'
   "Plugin 'jelera/vim-javascript-syntax' " Possibly no longer needed.
   Plugin 'joonty/vdebug.git'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
   Plugin 'lifepillar/vim-solarized8'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'plasticboy/vim-markdown'
+  Plugin 'scrooloose/nerdtree'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-eunuch'
@@ -36,12 +40,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
-
-  " From other sources.
-  Plugin 'Markdown'
-  Plugin 'Markdown-syntax'
-  Plugin 'The-NERD-tree'
-  Plugin 'securemodelines'
 
   call vundle#end()
   filetype plugin indent on
