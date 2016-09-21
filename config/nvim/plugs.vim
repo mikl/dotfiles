@@ -12,7 +12,6 @@ if !isdirectory("~/.vim/bundle/Vundle.vim/")
 
   " From Github.
   Plugin 'airblade/vim-gitgutter'
-  Plugin 'blueyed/vim-colors-solarized'
   Plugin 'ciaranm/securemodelines'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'godlygeek/tabular'
