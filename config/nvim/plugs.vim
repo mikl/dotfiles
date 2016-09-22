@@ -14,9 +14,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'lifepillar/vim-solarized8'
-  Plug 'pangloss/vim-javascript'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'scrooloose/nerdtree'
+  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-eunuch'
