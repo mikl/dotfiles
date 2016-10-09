@@ -58,3 +58,5 @@
 	gpgsign = true
 [credential]
 	helper = osxkeychain
+[gpg]
+	program = /usr/local/bin/gpg
