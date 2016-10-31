@@ -13,7 +13,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'joonty/vdebug'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'lifepillar/vim-solarized8'
+  Plug 'mikl/NeoSolarized'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }

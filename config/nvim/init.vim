@@ -11,7 +11,7 @@ endif
 
 let g:solarized_hitrail=1 " Highlight trailing spaces.
 let g:solarized_italic=0 " Italics are less legible.
-colorscheme solarized8_light
+colorscheme NeoSolarized
 
 " Open/close NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
