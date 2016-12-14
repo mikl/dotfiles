@@ -9,11 +9,11 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'ciaranm/securemodelines'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'godlygeek/tabular'
+  Plug 'iCyMind/NeoSolarized'
   "Plug 'jelera/vim-javascript-syntax' " Possibly no longer needed.
   Plug 'joonty/vdebug'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'mikl/NeoSolarized'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
