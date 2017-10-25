@@ -4,10 +4,6 @@ case `uname -s` in
         # Make sure /usr/local/bin takes precendence over /usr/bin
         PATH=/usr/local/sbin:/usr/local/bin:"${PATH}"
 
-        # Add our Homebrew Python bin.
-        PATH=/usr/local/share/python:"${PATH}"
-        export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
         # Add Composer bin folder.
         PATH="${HOME}/.composer/vendor/bin:${PATH}"
 
