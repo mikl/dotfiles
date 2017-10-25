@@ -53,10 +53,6 @@ LANGUAGE=en_US:en
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
-# Tell Docksal to use Docker for Mac rather than VirtualBox
-# See http://docksal.readthedocs.io/en/master/env-setup/
-export DOCKER_NATIVE=1
-
 # FZF configuration
 FZF_DEFAULT_COMMAND='pt -g ""'
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
