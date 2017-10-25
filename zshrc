@@ -1,5 +1,41 @@
 # mikls zsh config file.
 
+# From here until "User configuration" is oh-my-zsh config.
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Load oh-my-zsh if installed.
+if [ -d ~/.oh-my-zsh ] && [ -f ~/.oh-my-zshrc ]; then
+  source ~/.oh-my-zshrc
+else
+  # If not using oh-my-zsh, fall back on custom configuration.
+
+  if [ -d /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+  fi
+
+  # VI-style keybindings
+  bindkey -v 
+  bindkey -M viins '^r' history-incremental-search-backward
+  bindkey -M vicmd '^r' history-incremental-search-backward
+
+  # Misc. settings
+  unsetopt beep # Disable console beeps.
+  setopt autocd notify
+
+  # If available, use liquidprompt.
+  if [ -f /usr/local/share/liquidprompt ]; then
+    .  /usr/local/share/liquidprompt
+  else
+    # Configure the prompt
+    autoload -U promptinit && promptinit
+    setopt prompt_subst
+
+    export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F{cyan}(%f%~%F{cyan})%f %# "
+  fi
+fi
+
 # Use the same aliases as bash.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -7,10 +43,6 @@ fi
 
 # Load tmuxinator if available.
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-if [ -d /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
 
 # Support for iterm2 3.0 shell integration.
 # see http://iterm2.com/shell_integration.html
@@ -25,29 +57,9 @@ SAVEHIST=1000
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
 # Keybindings
-bindkey -v # VI-style keybindings
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
-
-# Misc. settings
-unsetopt beep # Disable console beeps.
-setopt autocd notify
-
-# Configure the prompt
-autoload -U promptinit && promptinit
-setopt prompt_subst
-
-export PROMPT="%F{cyan}(%f%n@%U%m%u%F{cyan})%f %F{cyan}(%f%i/%l/%?%F{cyan})%f %F{cyan}(%f%~%F{cyan})%f
-%# "
-
 if [ -d ~/.nvm ]; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
-fi
-
-# If available, use liquidprompt.
-if [ -f /usr/local/share/liquidprompt ]; then
-  .  /usr/local/share/liquidprompt
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
