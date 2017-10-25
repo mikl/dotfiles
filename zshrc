@@ -24,10 +24,8 @@ else
   unsetopt beep # Disable console beeps.
   setopt autocd notify
 
-  # If available, use liquidprompt.
-  if [ -f /usr/local/share/liquidprompt ]; then
-    .  /usr/local/share/liquidprompt
-  else
+  # Liquidprompt is not available, configure a basic prompt.
+  if [ !-f /usr/local/share/liquidprompt ]; then
     # Configure the prompt
     autoload -U promptinit && promptinit
     setopt prompt_subst
@@ -55,6 +53,11 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
+
+# If available, use liquidprompt.
+if [ -f /usr/local/share/liquidprompt ]; then
+  .  /usr/local/share/liquidprompt
+fi
 
 # Keybindings
 if [ -d ~/.nvm ]; then
