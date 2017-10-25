@@ -37,10 +37,6 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-if [ -f $HOME/.console/console.rc ] ; then
-    source "$HOME/.console/console.rc" 2>/dev/null
-fi
-
 # Use npm bindir if available.
 if [ -d /usr/local/share/npm/bin ] ; then
     PATH="${PATH}":/usr/local/share/npm/bin
