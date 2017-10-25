@@ -1,13 +1,5 @@
 # mikls zsh config file.
 
-# Environment variables.
-export CLICOLOR=1
-export COLORTERM=yes
-export EDITOR=nvim
-export LESS=-r
-export LSCOLORS=CxFxExDxBxegedabagacad
-export PAGER=less
-
 # Use the same aliases as bash.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

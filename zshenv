@@ -1,3 +1,10 @@
+export CLICOLOR=1
+export COLORTERM=yes
+export EDITOR=nvim
+export LESS=-r
+export LSCOLORS=CxFxExDxBxegedabagacad
+export PAGER=less
+
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
