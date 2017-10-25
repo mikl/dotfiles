@@ -25,7 +25,7 @@ else
   setopt autocd notify
 
   # Liquidprompt is not available, configure a basic prompt.
-  if [ !-f /usr/local/share/liquidprompt ]; then
+  if [ ! -f /usr/local/share/liquidprompt ]; then
     # Configure the prompt
     autoload -U promptinit && promptinit
     setopt prompt_subst
