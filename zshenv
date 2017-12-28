@@ -5,6 +5,9 @@ export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
 
+# Disable auto-title for tmuxp compatibility.
+export DISABLE_AUTO_TITLE=true
+
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
@@ -18,7 +21,7 @@ case `uname -s` in
         export PAGER=vimpager
 
         # Set path to NodeJS packages.
-        export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+        export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
         if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
             export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
