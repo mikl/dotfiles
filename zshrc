@@ -60,9 +60,9 @@ if [ -f /usr/local/share/liquidprompt ]; then
 fi
 
 # Keybindings
-if [ -d ~/.nvm ]; then
+if [ -s ~/.nvm/nvm.sh ]; then
   export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
+  source $NVM_DIR/nvm.sh
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
