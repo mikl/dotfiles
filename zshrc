@@ -65,4 +65,6 @@ if [ -s ~/.nvm/nvm.sh ]; then
   source $NVM_DIR/nvm.sh
 fi
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
