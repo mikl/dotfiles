@@ -8,10 +8,8 @@ if filereadable(expand("$HOME/.config/nvim/core.vim"))
   source $HOME/.config/nvim/core.vim
 endif
 
-
-let g:solarized_hitrail=1 " Highlight trailing spaces.
-let g:solarized_italic=0 " Italics are less legible.
-colorscheme NeoSolarized
+set termguicolors
+colorscheme monokai_pro
 
 " Open/close NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
