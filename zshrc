@@ -59,7 +59,11 @@ if [ -f /usr/local/share/liquidprompt ]; then
   .  /usr/local/share/liquidprompt
 fi
 
-# Keybindings
+# fnm: https://github.com/Schniz/fnm
+if [ -x "$(command -v foo)" ]; then
+  eval "$(fnm env --multi)"
+fi
+
 if [ -s ~/.nvm/nvm.sh ]; then
   export NVM_DIR=~/.nvm
   source $NVM_DIR/nvm.sh
