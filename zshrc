@@ -60,8 +60,8 @@ if [ -f /usr/local/share/liquidprompt ]; then
 fi
 
 # fnm: https://github.com/Schniz/fnm
-if [ -x "$(command -v foo)" ]; then
-  eval "$(fnm env --multi)"
+if [ -x "$(command -v fnm)" ]; then
+  eval "$(fnm env --multi --shell=zsh)"
 fi
 
 if [ -s ~/.nvm/nvm.sh ]; then
