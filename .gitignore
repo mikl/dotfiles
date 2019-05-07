@@ -1,3 +1,7 @@
+# Cache and temp files
+node_modules
+yarn.lock
+
 # Machine-specific or sensitive stuff.
 /config/browserify/cache.json
 /config/configstore/
