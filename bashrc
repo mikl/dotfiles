@@ -49,10 +49,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Allow Rubygems to be installed in my homedir.
-export GEM_HOME=$HOME/gems
-export PATH=$GEM_HOME/bin:$PATH
-
 # Load tmuxinator if available.
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 

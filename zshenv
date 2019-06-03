@@ -17,6 +17,9 @@ case `uname -s` in
         # Add Composer bin folder.
         PATH="${HOME}/.composer/vendor/bin:${PATH}"
 
+        # Add Ruby bin folder (macOS 10.14).
+        PATH="${HOME}/.gem/ruby/2.3.0/bin:${PATH}"
+
         # Use vimpager.
         export PAGER=vimpager
 
@@ -44,10 +47,6 @@ fi
 if [ -d /usr/local/share/npm/bin ] ; then
     PATH="${PATH}":/usr/local/share/npm/bin
 fi
-
-# Allow Rubygems to be installed in my homedir.
-export GEM_HOME=$HOME/gems
-export PATH=$GEM_HOME/bin:$PATH
 
 # Safe settings for locale stuff.
 LANG=en_US.UTF-8
