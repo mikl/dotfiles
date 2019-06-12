@@ -59,16 +59,13 @@ if [ -f /usr/local/share/liquidprompt ]; then
   .  /usr/local/share/liquidprompt
 fi
 
-# fnm: https://github.com/Schniz/fnm
-if [ -x "$(command -v fnm)" ]; then
-  eval "$(fnm env --multi --shell=zsh)"
-fi
-
-if [ -s ~/.nvm/nvm.sh ]; then
-  export NVM_DIR=~/.nvm
-  source $NVM_DIR/nvm.sh
+if [ -s "$HOME/.volta/load.sh" ]; then
+  export VOLTA_HOME="$HOME/.volta"
+  export PATH="$VOLTA_HOME/bin:$PATH"
+  source "$VOLTA_HOME/load.sh"
 fi
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
