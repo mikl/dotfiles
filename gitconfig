@@ -1,6 +1,6 @@
 [core]
 	excludesfile = /home/mikl/.gitignore
-  legacyheaders = false
+	legacyheaders = false
 	quotepath = false
 	autocrlf = input
 [user]
@@ -12,19 +12,19 @@
 [push]
 	default = simple
 [repack]
-  usedeltabaseoffset = true
+	usedeltabaseoffset = true
 [color]
-  ui = auto
-  interactive = auto
+	ui = auto
+	interactive = auto
 [alias]
-  st = status
-  ci = commit
-  co = checkout
-  staged = "diff --cached"
-  oneline = "log --pretty=oneline"
-  llog = log --date=local
-  changes = diff --name-status -r
-  unadd = update-index --force-remove
+	st = status
+	ci = commit
+	co = checkout
+	staged = "diff --cached"
+	oneline = "log --pretty=oneline"
+	llog = log --date=local
+	changes = diff --name-status -r
+	unadd = update-index --force-remove
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
@@ -41,9 +41,9 @@
 
 # Shortcuts
 [url "ssh://mikl@git.drupal.org/project/"]
-    insteadOf = "drupal:"
+	insteadOf = "drupal:"
 [url "ssh://mikl@git.drupal.org/sandbox/"]
-    insteadOf = "drupalsand:"
+	insteadOf = "drupalsand:"
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
