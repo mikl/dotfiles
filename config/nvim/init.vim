@@ -31,9 +31,9 @@ tnoremap <Leader>e <C-\><C-n>
 
 " Enable Airline.
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_powerline_fonts=0
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+let g:airline_powerline_fonts=1
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp\|temp$',
