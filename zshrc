@@ -16,7 +16,7 @@ else
   fi
 
   # VI-style keybindings
-  bindkey -v 
+  bindkey -v
   bindkey -M viins '^r' history-incremental-search-backward
   bindkey -M vicmd '^r' history-incremental-search-backward
 
@@ -68,4 +68,3 @@ fi
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

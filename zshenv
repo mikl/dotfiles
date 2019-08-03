@@ -52,11 +52,11 @@ if [ -d /usr/local/share/npm/bin ] ; then
 fi
 
 # Safe settings for locale stuff.
-LANG=en_US.UTF-8
-LANGUAGE=en_US:en
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # FZF configuration
-FZF_DEFAULT_COMMAND='pt -g ""'
-FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_COMMAND='pt -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
