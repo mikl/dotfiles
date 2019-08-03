@@ -8,6 +8,9 @@ export PAGER=less
 # Disable auto-title for tmuxp compatibility.
 export DISABLE_AUTO_TITLE=true
 
+# Enable CLI history for iex (Elixir).
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # OS-specific overrides.
 case `uname -s` in
     'Darwin') # Mac OS X
