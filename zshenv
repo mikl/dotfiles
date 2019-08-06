@@ -5,6 +5,9 @@ export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
 export PAGER=less
 
+# Disable ads from npm packages.
+export DISABLE_OPENCOLLECTIVE=1
+
 # Disable auto-title for tmuxp compatibility.
 export DISABLE_AUTO_TITLE=true
 
