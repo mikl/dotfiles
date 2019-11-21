@@ -57,6 +57,8 @@
 	trustExitCode = true
 [commit]
 	gpgsign = true
+[tag]
+	forceSignAnnotated = true
 [credential]
 	helper = osxkeychain
 [gpg]
