@@ -1,5 +1,4 @@
 [core]
-	excludesfile = /home/mikl/.gitignore
 	hooksPath = .githooks
 	legacyheaders = false
 	quotepath = false
