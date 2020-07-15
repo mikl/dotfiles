@@ -11,8 +11,8 @@ if [ -d ~/.oh-my-zsh ] && [ -f ~/.oh-my-zshrc ]; then
 else
   # If not using oh-my-zsh, fall back on custom configuration.
 
-  if [ -d /usr/local/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
+  if [ -d /usr/local/share/zsh/site-functions ]; then
+    fpath=(/usr/local/share/zsh/site-functions $fpath)
   fi
 
   # VI-style keybindings
