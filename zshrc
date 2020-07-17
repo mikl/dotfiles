@@ -59,10 +59,9 @@ if [ -f /usr/local/share/liquidprompt ]; then
   .  /usr/local/share/liquidprompt
 fi
 
-if [ -s "$HOME/.volta/load.sh" ]; then
+if [ -d "$HOME/.volta" ]; then
   export VOLTA_HOME="$HOME/.volta"
-  export PATH="$VOLTA_HOME/bin:$PATH"
-  source "$VOLTA_HOME/load.sh"
+  grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
 fi
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
