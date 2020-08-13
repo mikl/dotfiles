@@ -61,7 +61,7 @@ fi
 
 if [ -d "$HOME/.volta" ]; then
   export VOLTA_HOME="$HOME/.volta"
-  grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
+  export PATH="$VOLTA_HOME/bin:$PATH"
 fi
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
