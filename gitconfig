@@ -8,7 +8,7 @@
 	email = mikkel@hoegh.org
 	signingkey = 31B90C37684B42AE793CC1F6971FFF1EE2DFADEE
 [format]
-  numbered = auto
+	numbered = auto
 [push]
 	default = simple
 [repack]
@@ -31,9 +31,9 @@
 [rerere]
 	enabled = 1
 [rebase]
-  autoStash = 1
+	autoStash = 1
 [github]
-  user = mikl
+	user = mikl
 
 [mergetool]
 	keepBackup = false
