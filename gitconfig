@@ -6,7 +6,7 @@
 [user]
 	name = Mikkel Hoegh
 	email = mikkel@hoegh.org
-	signingkey = C60E8A9E
+	signingkey = 31B90C37684B42AE793CC1F6971FFF1EE2DFADEE
 [format]
   numbered = auto
 [push]
