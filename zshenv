@@ -23,8 +23,6 @@ case `uname -s` in
         # Add Composer bin folder.
         PATH="${HOME}/.composer/vendor/bin:${PATH}"
 
-        # Add Ruby bin folder (macOS 10.14).
-        PATH="${HOME}/.gem/ruby/2.3.0/bin:${PATH}"
 
         # Use vimpager.
         export PAGER=vimpager
