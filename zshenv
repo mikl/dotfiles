@@ -23,6 +23,10 @@ case `uname -s` in
         # Add Composer bin folder.
         PATH="${HOME}/.composer/vendor/bin:${PATH}"
 
+        # Homebrew on Apple Silicon.
+        if [ -d /opt/homebrew/bin ]; then
+          PATH="/opt/homebrew/bin:${PATH}"
+        fi
 
         # Use vimpager.
         export PAGER=vimpager
