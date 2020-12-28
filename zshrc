@@ -11,10 +11,6 @@ if [ -d ~/.oh-my-zsh ] && [ -f ~/.oh-my-zshrc ]; then
 else
   # If not using oh-my-zsh, fall back on custom configuration.
 
-  if [ -d /usr/local/share/zsh/site-functions ]; then
-    fpath=(/usr/local/share/zsh/site-functions $fpath)
-  fi
-
   # VI-style keybindings
   bindkey -v
   bindkey -M viins '^r' history-incremental-search-backward
@@ -54,16 +50,25 @@ HISTSIZE=10000
 SAVEHIST=1000
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
-# If available, use liquidprompt.
-if [ -f /usr/local/share/liquidprompt ]; then
-  .  /usr/local/share/liquidprompt
+# Homebrew-specific settings.
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX=$(brew --prefix)
+  FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+
+  # If available, use liquidprompt.
+  if [ -f $HOMEBREW_PREFIX/share/liquidprompt ]; then
+    .  $HOMEBREW_PREFIX/share/liquidprompt
+  fi
+
+  [ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
 fi
 
 if [ -d "$HOME/.volta" ]; then
   export VOLTA_HOME="$HOME/.volta"
   export PATH="$VOLTA_HOME/bin:$PATH"
 fi
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
