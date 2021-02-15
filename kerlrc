@@ -1,0 +1,1 @@
+export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl) --disable-debug"

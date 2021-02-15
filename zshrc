@@ -64,6 +64,12 @@ if type brew &>/dev/null; then
   fi
 
   [ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
+
+  ASDF_PREFIX=$(brew --prefix asdf)
+  if [ -f ${ASDF_PREFIX}/asdf.sh ]; then
+    export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
+    .  ${ASDF_PREFIX}/asdf.sh
+  fi
 fi
 
 if [ -d "$HOME/.volta" ]; then
