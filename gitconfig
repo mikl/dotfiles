@@ -9,6 +9,10 @@
 	signingkey = 31B90C37684B42AE793CC1F6971FFF1EE2DFADEE
 [format]
 	numbered = auto
+[pull]
+	# Do fast-forward only merges on `git pull`
+	rebase = false
+	ff = only
 [push]
 	default = simple
 [repack]
