@@ -1,0 +1,6 @@
+*.css eol=lf diff=css
+*.md eol=lf diff=markdown
+*.php eol=lf diff=php
+*.py eol=lf diff=python
+*.ex eol=lf diff=elixir
+*.exs eol=lf diff=elixir
