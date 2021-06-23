@@ -3,6 +3,8 @@
 	legacyheaders = false
 	quotepath = false
 	autocrlf = input
+[init]
+	defaultBranch = master
 [user]
 	name = Mikkel Hoegh
 	email = mikkel@hoegh.org
