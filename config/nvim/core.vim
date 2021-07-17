@@ -75,6 +75,10 @@ set foldenable
 set foldmethod=indent " My files are always neatly indented
 set foldlevel=100 " Don't autofold
 
+" Security fix: modelines have been an avenue for trojan attacks against
+" VIM-users, so we'll disable that.
+set nomodeline
+
 """""""""""""""""""
 " Misc. functions "
 """""""""""""""""""
