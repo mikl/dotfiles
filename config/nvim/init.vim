@@ -4,7 +4,7 @@ if filereadable(expand("$HOME/.config/nvim/core.vim"))
 endif
 
 set termguicolors
-colorscheme monokai_pro
+colorscheme desert
 
 " This maps Leader + e to exit terminal mode.
 " http://ryanselk.com/2015/05/19/terminals-in-neovim/
