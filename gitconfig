@@ -40,26 +40,14 @@
 	autoStash = 1
 [github]
 	user = mikl
-
 [mergetool]
 	keepBackup = false
 	prompt = false
-
 # Shortcuts
 [url "ssh://mikl@git.drupal.org/project/"]
 	insteadOf = "drupal:"
 [url "ssh://mikl@git.drupal.org/sandbox/"]
 	insteadOf = "drupalsand:"
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [commit]
 	gpgsign = true
 [tag]
