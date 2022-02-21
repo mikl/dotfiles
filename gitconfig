@@ -33,7 +33,7 @@
 	unadd = update-index --force-remove
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 [rerere]
 	enabled = 1
 [rebase]
