@@ -4,3 +4,4 @@
 *.py eol=lf diff=python
 *.ex eol=lf diff=elixir
 *.exs eol=lf diff=elixir
+mix.lock merge=binary
