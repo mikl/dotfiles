@@ -26,6 +26,9 @@ require('packer').startup(function(use)
   -- .editorconfig support.
   use {'gpanders/editorconfig.nvim'}
 
+  -- Fancy statusline.
+  use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+
   -- My favoirte color scheme.
   use {'sainnhe/sonokai'}
 end)
@@ -33,3 +36,12 @@ end)
 vim.cmd('colorscheme sonokai')
 
 require('mikl/treesitter')
+
+require('lualine').setup({
+  options = {
+      icons_enabled = false,
+      theme = 'gruvbox',
+      globalstatus = true,
+    },
+  })
+
