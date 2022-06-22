@@ -20,6 +20,9 @@ require('packer').startup(function(use)
   -- Use Packer to update Packer.
   use {'wbthomason/packer.nvim'}
 
+  -- Telescope for quick file finding.
+  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-fzy-native.nvim'}}}
+
   -- Treesitter for syntax highlighting and more.
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
@@ -35,6 +38,7 @@ end)
 
 vim.cmd('colorscheme sonokai')
 
+require('mikl/telescope')
 require('mikl/treesitter')
 
 require('lualine').setup({
