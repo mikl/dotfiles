@@ -20,6 +20,9 @@ require('packer').startup(function(use)
   -- Use Packer to update Packer.
   use {'wbthomason/packer.nvim'}
 
+  -- Treesitter for syntax highlighting and more.
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
   -- .editorconfig support.
   use {'gpanders/editorconfig.nvim'}
 
@@ -28,3 +31,5 @@ require('packer').startup(function(use)
 end)
 
 vim.cmd('colorscheme sonokai')
+
+require('mikl/treesitter')
