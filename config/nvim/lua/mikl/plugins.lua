@@ -36,6 +36,8 @@ require('packer').startup(function(use)
   use {'sainnhe/sonokai'}
 end)
 
+vim.api.nvim_set_var('sonokai_better_performance', 1)
+vim.api.nvim_set_var('sonokai_style', 'espresso')
 vim.cmd('colorscheme sonokai')
 
 require('mikl/telescope')
@@ -44,7 +46,7 @@ require('mikl/treesitter')
 require('lualine').setup({
   options = {
       icons_enabled = false,
-      theme = 'gruvbox',
+      theme = 'sonokai',
       globalstatus = true,
     },
   })
