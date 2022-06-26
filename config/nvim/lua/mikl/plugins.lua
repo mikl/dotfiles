@@ -32,6 +32,8 @@ require('packer').startup(function(use)
   -- Fancy statusline.
   use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
 
+  use {'numToStr/Comment.nvim'}
+
   -- My favoirte color scheme.
   use {'sainnhe/sonokai'}
 end)
@@ -42,6 +44,8 @@ vim.cmd('colorscheme sonokai')
 
 require('mikl/telescope')
 require('mikl/treesitter')
+
+require('Comment').setup()
 
 require('lualine').setup({
   options = {
