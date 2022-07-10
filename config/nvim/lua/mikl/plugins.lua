@@ -34,6 +34,8 @@ require('packer').startup(function(use)
 
   use {'numToStr/Comment.nvim'}
 
+  use {'kyazdani42/nvim-tree.lua'}
+
   -- My favoirte color scheme.
   use {'sainnhe/sonokai'}
 end)
@@ -42,6 +44,7 @@ vim.api.nvim_set_var('sonokai_better_performance', 1)
 vim.api.nvim_set_var('sonokai_style', 'espresso')
 vim.cmd('colorscheme sonokai')
 
+require('mikl/nvim-tree')
 require('mikl/telescope')
 require('mikl/treesitter')
 
