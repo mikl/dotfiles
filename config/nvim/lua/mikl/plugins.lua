@@ -20,6 +20,9 @@ require('packer').startup(function(use)
   -- Use Packer to update Packer.
   use {'wbthomason/packer.nvim'}
 
+  -- LSP config to use language servers.
+  use {'neovim/nvim-lspconfig'}
+
   -- Telescope for quick file finding.
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-fzy-native.nvim'}}}
 
@@ -34,6 +37,8 @@ require('packer').startup(function(use)
 
   use {'numToStr/Comment.nvim'}
 
+  use {'jose-elias-alvarez/null-ls.nvim'}
+
   use {'kyazdani42/nvim-tree.lua'}
 
   -- My favoirte color scheme.
@@ -44,6 +49,7 @@ vim.api.nvim_set_var('sonokai_better_performance', 1)
 vim.api.nvim_set_var('sonokai_style', 'espresso')
 vim.cmd('colorscheme sonokai')
 
+require('mikl/null-ls')
 require('mikl/nvim-tree')
 require('mikl/telescope')
 require('mikl/treesitter')
