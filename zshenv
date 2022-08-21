@@ -25,7 +25,7 @@ case `uname -s` in
 
         # Homebrew on Apple Silicon.
         if [ -d /opt/homebrew/bin ]; then
-          PATH="/opt/homebrew/bin:${PATH}"
+          PATH="/opt/homebrew/sbin:/opt/homebrew/bin:${PATH}"
         fi
 
         # Use vimpager.
