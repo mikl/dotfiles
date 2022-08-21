@@ -68,7 +68,7 @@ if type brew &>/dev/null; then
   ASDF_PREFIX=$(brew --prefix asdf)
   if [ -f ${ASDF_PREFIX}/asdf.sh ]; then
     export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
-    .  ${ASDF_PREFIX}/asdf.sh
+    .  ${ASDF_PREFIX}/libexec/asdf.sh
   fi
 fi
 
