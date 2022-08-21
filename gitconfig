@@ -17,6 +17,7 @@
 	ff = only
 [push]
 	default = simple
+	autoSetupRemote = true
 [repack]
 	usedeltabaseoffset = true
 [color]
