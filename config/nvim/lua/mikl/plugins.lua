@@ -23,6 +23,13 @@ require('packer').startup(function(use)
   -- LSP config to use language servers.
   use {'neovim/nvim-lspconfig'}
 
+  -- cmp framework for auto-completion support
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/nvim-cmp'}
+
   -- Telescope for quick file finding.
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-fzy-native.nvim'}}}
 
@@ -41,6 +48,9 @@ require('packer').startup(function(use)
 
   use {'kyazdani42/nvim-tree.lua'}
 
+  -- Elixir language support.
+  use({'mhanberg/elixir.nvim', requires = {'neovim/nvim-lspconfig', 'nvim-lua/plenary.nvim'}})
+
   -- My favoirte color scheme.
   use {'sainnhe/sonokai'}
 end)
@@ -53,6 +63,7 @@ require('mikl/null-ls')
 require('mikl/nvim-tree')
 require('mikl/telescope')
 require('mikl/treesitter')
+require('mikl/elixir')
 
 require('Comment').setup()
 
