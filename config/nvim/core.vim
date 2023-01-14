@@ -120,12 +120,6 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 " sudo save this file
 nmap <leader>S :SudoWrite<CR>
 
-" Easy split navigation.
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 " Make Y behave like other capitals.
 nnoremap  Y y$
 
