@@ -8,7 +8,6 @@
 [user]
 	name = Mikkel Hoegh
 	email = mikkel@hoegh.org
-	signingkey = 31B90C37684B42AE793CC1F6971FFF1EE2DFADEE
 [format]
 	numbered = auto
 [pull]
@@ -56,4 +55,4 @@
 [credential]
 	helper = osxkeychain
 [gpg]
-	program = /usr/local/bin/gpg
+	format = ssh
