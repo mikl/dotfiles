@@ -28,6 +28,10 @@ case `uname -s` in
           PATH="/opt/homebrew/sbin:/opt/homebrew/bin:${PATH}"
         fi
 
+        if [ -d ~/.rd/bin ]; then
+          PATH="${HOME}/.rd/bin:${PATH}"
+        fi
+
         # Use vimpager.
         export PAGER=vimpager
 
