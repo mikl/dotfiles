@@ -12,6 +12,16 @@ if filereadable(expand("$HOME/.config/nvim/core.vim"))
   source $HOME/.config/nvim/core.vim
 endif
 
+""""""""""""
+" Mappings "
+""""""""""""
+
+" Easy split navigation.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 """"""""""""""""""""
 " Theme and colors "
 """"""""""""""""""""
