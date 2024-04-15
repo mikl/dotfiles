@@ -1,5 +1,6 @@
 .DS_Store
 .elixir_ls
+.elixir-tools
 .idea
 .sass-cache
 .svn
