@@ -63,7 +63,7 @@ if type brew &>/dev/null; then
     .  $HOMEBREW_PREFIX/share/liquidprompt
   fi
 
-  [ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
+  [ -f $HOMEBREW_PREFIX/bin/zoxide ] && eval "$(zoxide init --cmd j zsh)"
 
   ASDF_PREFIX=$(brew --prefix asdf)
   if [ -f ${ASDF_PREFIX}/asdf.sh ]; then
