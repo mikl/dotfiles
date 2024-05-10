@@ -3,7 +3,6 @@ export COLORTERM=yes
 export EDITOR=nvim
 export LESS=-r
 export LSCOLORS=CxFxExDxBxegedabagacad
-export PAGER=less
 
 # Disable ads from npm packages.
 export DISABLE_OPENCOLLECTIVE=1
@@ -31,9 +30,6 @@ case `uname -s` in
         if [ -d ~/.rd/bin ]; then
           PATH="${HOME}/.rd/bin:${PATH}"
         fi
-
-        # Use vimpager.
-        export PAGER=vimpager
 
         # Set path to NodeJS packages.
         export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
