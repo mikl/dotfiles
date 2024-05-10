@@ -27,8 +27,8 @@ case `uname -s` in
           PATH="/opt/homebrew/sbin:/opt/homebrew/bin:${PATH}"
         fi
 
-        if [ -d ~/.rd/bin ]; then
-          PATH="${HOME}/.rd/bin:${PATH}"
+        if [ -d $HOME/.docker/bin ]; then
+          PATH="${HOME}/.docker/bin:${PATH}"
         fi
 
         # Set path to NodeJS packages.
