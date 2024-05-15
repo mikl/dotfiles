@@ -1,0 +1,15 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[cobol]
+disabled = true
+
+[docker_context]
+disabled = true
+
