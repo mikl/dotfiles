@@ -2,7 +2,7 @@
 	hooksPath = .githooks
 	legacyheaders = false
 	quotepath = false
-	autocrlf = input
+	autocrlf = false
 [init]
 	defaultBranch = master
 [user]
