@@ -3,6 +3,7 @@
 	legacyheaders = false
 	quotepath = false
 	autocrlf = false
+	editor = nvim
 [init]
 	defaultBranch = master
 [user]
