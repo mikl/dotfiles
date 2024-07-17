@@ -18,7 +18,8 @@ end
 # Add Composer bin folder.
 fish_add_path ~/.composer/vendor/bin
 
-fish_add_path ~/.docker/bin
+# Add .local/bin for pipx.
+fish_add_path ~/.local/bin
 
 # Private home folder bin.
 fish_add_path ~/bin
