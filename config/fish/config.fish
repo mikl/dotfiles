@@ -1,7 +1,7 @@
 # Main Fish config file.
 
 # No greeting, thx.
-set fish_greeting "🐟"
+set -U fish_greeting
 
 # See also the conf.d folder next to this file.
 function fish_user_key_bindings
