@@ -4,7 +4,5 @@ for brewpath in $common_brew_paths
     if test -x "$brewpath/bin/brew"
         eval ("$brewpath/bin/brew" shellenv)
         break
-    else
-        echo "nope $brewpath"
     end
 end
