@@ -1,0 +1,9 @@
+[tools]
+elixir = "1.18.3-otp-27"
+erlang = "27.3.3"
+node = "22"
+pnpm = "10.10.0"
+ruby = "3"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
