@@ -6,5 +6,10 @@ if status is-interactive
 
     # NeoVim
     abbr --add ni nvim
+    abbr --add vi nvim
+    abbr --add vim nvim
     abbr --add tabe nvim
+
+    # Arch Linux
+    abbr --add yay paru
 end
