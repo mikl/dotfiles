@@ -10,6 +10,7 @@ if status is-interactive
     abbr --add vim nvim
     abbr --add tabe nvim
 
-    # Arch Linux
+    # Various tools
+    abbr --add lg lazygit
     abbr --add yay paru
 end
