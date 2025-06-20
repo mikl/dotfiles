@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  timeFormat: _2. Jan 06
+  shortTimeFormat: 15:04
+  nerdFontsVersion: '3'
+git:
+  paging:
+  pager: delta --dark --paging=never
+  autoFetch: false
+update:
+  method: 'never'
+os:
+  editPreset: 'nvim'
+
