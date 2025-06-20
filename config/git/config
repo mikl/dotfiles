@@ -1,9 +1,11 @@
+# vim: set ts=4 sw=4 et:
 [core]
 	hooksPath = .githooks
 	legacyheaders = false
 	quotepath = false
 	autocrlf = false
 	editor = nvim
+	pager = delta
 [init]
 	defaultBranch = master
 [user]
@@ -32,8 +34,11 @@
 	llog = log --date=local
 	changes = diff --name-status -r
 	unadd = update-index --force-remove
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+    navigate = true
 [merge]
-	tool = vimdiff
 	conflictstyle = zdiff3
 [rerere]
 	enabled = 1
