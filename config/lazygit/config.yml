@@ -8,6 +8,8 @@ git:
   paging:
   pager: delta --dark --paging=never
   autoFetch: false
+  # Custom GPG handling since we rely on 1Password’s agent.
+  overrideGpg: true
 update:
   method: 'never'
 os:
