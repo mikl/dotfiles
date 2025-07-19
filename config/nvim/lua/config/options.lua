@@ -5,7 +5,7 @@
 vim.g.root_spec = { { ".git", "lua", "mix.exs" }, "cwd" }
 
 if vim.g.neovide then
-  vim.o.guifont = "IosevkaTermSlab_Nerd_Font_Mono:h12"
+  vim.o.guifont = "Iosevka Slab:h12"
 
   vim.g.neovide_cursor_vfx_mode = "pixiedust"
 
