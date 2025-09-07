@@ -1,3 +1,3 @@
-[config]
+[config,config.tmpl]
 indent_size = 4
 indent_style = tab

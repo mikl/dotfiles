@@ -11,6 +11,9 @@
 [user]
 	name = Mikkel Hoegh
 	email = mikkel@hoegh.org
+{{- if .git.sshsign.key }}
+	signingkey = {{ .git.sshsign.key }}
+{{ end -}}
 [format]
 	numbered = auto
 [pull]
@@ -54,11 +57,19 @@
 	insteadOf = "drupal:"
 [url "ssh://mikl@git.drupal.org/sandbox/"]
 	insteadOf = "drupalsand:"
+{{- if .git.sshsign.key }}
+[gpg]
+	format = ssh
 [commit]
 	gpgsign = true
 [tag]
 	forceSignAnnotated = true
+{{- if .git.sshsign.program }}
+[gpg "ssh"]
+	program = {{ .git.sshsign.program }}
+{{- end -}}
+{{ end -}}
+{{- if eq .chezmoi.os "darwin" }}
 [credential]
 	helper = osxkeychain
-[gpg]
-	format = ssh
+{{ end }}
