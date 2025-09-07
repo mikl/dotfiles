@@ -29,6 +29,7 @@
 	ui = auto
 	interactive = auto
 [alias]
+	br = branch
 	st = status
 	ci = commit
 	co = checkout
@@ -39,6 +40,8 @@
 	unadd = update-index --force-remove
 [interactive]
 	diffFilter = delta --color-only
+[fetch]
+	prune = true
 [delta]
     navigate = true
 [merge]
