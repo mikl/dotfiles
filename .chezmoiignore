@@ -1,7 +1,0 @@
-/.editorconfig
-/LICENSE
-/README.md
-
-{{ if ne .chezmoi.os "darwin" -}}
-/dot_config/fish/conf.d/00-homebrew.fish
-{{- end }}
