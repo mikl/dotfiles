@@ -5,6 +5,7 @@
 {{ if ne .chezmoi.os "darwin" -}}
 # Only use Homebrew on macOS.
 .config/fish/conf.d/00-homebrew.fish
+.config/fish/conf.d/10-orbstack.fish
 {{ else -}}
 # Mise auto-registers with Fish on macOS, so this is only needed elsewhere.
 .config/fish/conf.d/01-mise.fish
