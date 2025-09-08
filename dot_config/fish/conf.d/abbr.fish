@@ -1,8 +1,12 @@
 if status is-interactive
     # Standard shell stuff.
-    abbr --add ll 'ls -l'
-    abbr --add la 'ls -lAh'
-    abbr --add l 'ls -CF'
+    abbr --add ls 'eza'
+    abbr --add ll 'eza -l'
+    abbr --add la 'eza -lAh'
+    abbr --add l 'eza -CF'
+
+    # Use bat instead of cat
+    abbr --add cat 'bat'
 
     # NeoVim
     abbr --add ni nvim
