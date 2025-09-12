@@ -18,6 +18,10 @@ set -x DISABLE_OPENCOLLECTIVE 1
 # Enable CLI history for iex (Elixir).
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 
+# NeoVim as editor.
+set -x EDITOR nvim
+set -x VISUAL nvim
+
 # NeoVim as man-pager
 set -x MANPAGER "nvim +Man!"
 
