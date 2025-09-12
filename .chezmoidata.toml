@@ -1,0 +1,4 @@
+[git.sshsign]
+# Default values, overwritten in `~/.config/chezmoi/chezmoi.toml` on a per-machine basis.
+key = false
+program = false
