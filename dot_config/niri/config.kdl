@@ -3,6 +3,8 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+prefer-no-csd
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -107,6 +109,11 @@ output "Apple Computer Inc StudioDisplay 0x2D5687B6" {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     position x=0 y=0
+}
+
+output "LG Electronics LG TV 0x01010101" {
+    mode "3840x2160@60.000"
+    scale 1.5
 }
 
 // Settings that influence how windows are positioned and sized.
