@@ -43,3 +43,17 @@ theme = Eldritch
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+
+{{- if ne .chezmoi.os "darwin" }}
+# macOS style keyboard shortcuts on Linux.
+keybind = super+a=select_all
+keybind = super+c=copy_to_clipboard
+keybind = super+d=new_split:right
+keybind = super+k=clear_screen
+keybind = super+n=new_window
+keybind = super+q=quit
+keybind = super+t=new_tab
+keybind = super+v=paste_from_clipboard
+keybind = super+w=close_surface
+keybind = super+zero=reset_font_size
+{{ end }}
