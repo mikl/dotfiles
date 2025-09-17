@@ -314,6 +314,10 @@ animations {
     // slowdown 3.0
 }
 
+workspace "browsing"
+workspace "code"
+workspace "comms"
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
@@ -345,6 +349,13 @@ window-rule {
 
     block-out-from "screen-capture"
 
+}
+
+window-rule {
+    match app-id=r#"^brave-browser$"#
+    match app-id=r#"^chromium$"#
+
+    open-on-workspace "browsing"
 }
 
 // Hide certain apps from screencasts (but allow screenshots).
