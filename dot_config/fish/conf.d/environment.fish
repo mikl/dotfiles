@@ -9,6 +9,10 @@ fish_add_path ~/.composer/vendor/bin
 # Add .local/bin for pipx.
 fish_add_path ~/.local/bin
 
+# Omarchy configuration.
+fish_add_path ~/.local/share/omarchy/bin
+set -x OMARCHY_PATH $HOME/.local/share/omarchy
+
 # Private home folder bin.
 fish_add_path ~/bin
 
