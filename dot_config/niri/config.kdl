@@ -22,7 +22,7 @@ input {
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
             layout "us"
-            options "lv3:ralt_switch,terminate:ctrl_alt_bksp,caps:escape_shifted_capslock"
+            options "lv3:lalt_switch,terminate:ctrl_alt_bksp,caps:escape"
             variant "mac"
         }
 
