@@ -1,10 +1,10 @@
 [tools]
 bun = "1.2"
 elixir = "1.18.3-otp-27"
-erlang = "27.3.3"
+erlang = "27"
 "gem:rails" = "latest"
 node = "22"
-pnpm = "10.10.0"
+pnpm = "10"
 ruby = "3"
 
 [settings]
