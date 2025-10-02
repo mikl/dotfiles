@@ -109,6 +109,20 @@ output "Apple Computer Inc StudioDisplay 0x2D5687B6" {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     position x=0 y=0
+
+    focus-at-startup
+}
+
+// Ghost duplicate screen showing up when connected to Apple Studio Display.
+// Disabled to avoid confusion.
+output "Unknown Unknown Unknown" {
+  off
+}
+
+// Framework Laptop built-in screen.
+output "BOE NE135A1M-NY1 Unknown" {
+  scale 1.75
+  position x=2560 y=0
 }
 
 output "LG Electronics LG TV 0x01010101" {
@@ -351,7 +365,6 @@ window-rule {
     match app-id=r#"^1Password$"#
 
     block-out-from "screen-capture"
-
 }
 
 window-rule {
