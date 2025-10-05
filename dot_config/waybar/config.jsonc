@@ -58,10 +58,11 @@
     "on-click": "$TERMINAL -e btop"
   },
   "clock": {
-    "format": "{:L%A %H:%M}",
+    "format": "{:L%A %R}",
     "format-alt": "{:L%d %B W%V %Y}",
+    "locale": "da_DK.UTF-8",
     "tooltip": false,
-    "on-click-right": "omarchy-cmd-tzupdate"
+    //"on-click-right": "omarchy-cmd-tzupdate"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
