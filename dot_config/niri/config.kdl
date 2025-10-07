@@ -375,6 +375,19 @@ window-rule {
     open-on-workspace "browsing"
 }
 
+window-rule {
+    match app-id=r#"^librewolf$"#
+    match app-id=r#"^jetbrains-phpstorm$"#
+
+    open-on-workspace "code"
+}
+
+window-rule {
+    match app-id=r#"^Slack$"#
+
+    open-on-workspace "comms"
+}
+
 // Hide certain apps from screencasts (but allow screenshots).
 window-rule {
     match app-id=r#"^brave-browser$"#
@@ -585,6 +598,7 @@ binds {
     Ctrl+Mod+Period { expel-window-from-column; }
 
     Ctrl+Mod+R { switch-preset-column-width; }
+    Ctrl+Shift+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
     //Mod+Shift+R { switch-preset-window-height; }
