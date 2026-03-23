@@ -2,6 +2,7 @@
 bun = "1.2"
 elixir = "1.18.3-otp-27"
 erlang = "27"
+"gem:kamal" = "latest"
 "gem:rails" = "latest"
 node = "22"
 pnpm = "10"
