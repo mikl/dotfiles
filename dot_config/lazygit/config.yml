@@ -3,15 +3,15 @@
 gui:
   timeFormat: _2. Jan 06
   shortTimeFormat: 15:04
-  nerdFontsVersion: '3'
+  nerdFontsVersion: "3"
 git:
-  paging:
-  pager: delta --dark --paging=never
+  pagers:
+    - pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+    - externalDiffCommand: difft --color=always
   autoFetch: false
   # Custom GPG handling since we rely on 1Password’s agent.
   overrideGpg: true
 update:
-  method: 'never'
+  method: "never"
 os:
-  editPreset: 'nvim'
-
+  editPreset: "nvim"
