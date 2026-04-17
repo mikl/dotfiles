@@ -1,12 +1,4 @@
 [tools]
-bun = "1.2"
-elixir = "1.18.3-otp-27"
-erlang = "27"
-"gem:kamal" = "latest"
-"gem:rails" = "latest"
-node = "22"
-pnpm = "10"
-ruby = "3"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "ruby"]
